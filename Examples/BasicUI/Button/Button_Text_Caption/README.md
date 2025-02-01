@@ -8,7 +8,7 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 - **🟢 Statik Buton**: Static özelliği true olan butondur. Text (`Caption`) özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
 - **🔵 Dinamik Buton**: Statik özelliği false olan butondur. Text (`Caption`) özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
-## 🔍 2. Buton Görünürlük Durumları
+## 🔍 2. Buton Text Caption Değiştirme Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
 - Kullanıcı **statik butonun Text değerini** değiştirebilir.
 - Kullanıcı **dinamik butonun Text değerini** değiştirebilir.
