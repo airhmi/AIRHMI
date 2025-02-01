@@ -1,10 +1,12 @@
 # Buton Görünürlük Olasılıkları
 
 Bu dokümanda, statik ve dinamik olmak üzere iki farklı butonun görünürlük durumları üzerinde etkili olan faktörler incelenmiştir.
+Statik butonlar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen butonlardır. Static(false) yani dinamik butonlar ise sayfaya özgüdür.
+Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman buton ilk hali ile baştan meydana getirilir. 
 
 ## 📌 1. Butonların Tanımı
-- **🟢 Statik Buton**: Program çalıştığında var olan ve sabit olarak ekranda bulunan butondur. Görünürlük (`Visible`) özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
-- **🔵 Dinamik Buton**: Program çalıştıktan sonra oluşturulan butondur. Görünürlük (`Visible`) özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
+- **🟢 Statik Buton**: Static özelliği true olan butondur. Görünürlük (`Visible`) özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
+- **🔵 Dinamik Buton**: Statik özelliği false olan butondur. Görünürlük (`Visible`) özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
 ## 🔍 2. Buton Görünürlük Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
