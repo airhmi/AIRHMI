@@ -25,3 +25,12 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 ✔️ **Statik butonun Text değerini** diğer sayfalardan değiştirilebilir.  
 ✔️ **Dinamik butonun Text değerini** yalnızca oluşturulduğu sayfada değiştirilebilir.  
 
+
+![Açıklama Metni](1.png)
+
+![Açıklama Metni](2.png)
+
+![Açıklama Metni](3.png)
+
+
+
