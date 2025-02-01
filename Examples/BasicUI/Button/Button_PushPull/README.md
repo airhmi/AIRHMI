@@ -27,3 +27,6 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 ✔️ **Statik butonun pushpull değerini** diğer sayfalardan değiştirilebilir.  
 ✔️ **Dinamik butonun pushpull değerini** yalnızca oluşturulduğu sayfada değiştirilebilir.  
 
+![Açıklama Metni](1.png)
+
+![Açıklama Metni](2.png)
