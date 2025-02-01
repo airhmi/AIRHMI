@@ -38,3 +38,8 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 ✔️ **Dinamik butonun görünürlüğü** yalnızca oluşturulduğu sayfada değiştirilebilir.  
 
 Bu bilgiler ışığında, **görünürlük değişikliklerinin beklenen sonuçları doğru şekilde ele alınmalıdır.** 🚀
+
+![Açıklama Metni](1.png)
+
+![Açıklama Metni](2.png)
+
