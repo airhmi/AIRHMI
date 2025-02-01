@@ -201,8 +201,8 @@
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton1" ,"Font_Color" , "#FFAB00");
-</OnDown>
+ButtonSet("EButton1" ,"Color" , "#FFAB00");
+ButtonSet("EButton1" ,"ColorTo" , "#321212");</OnDown>
     <OnClick>
     </OnClick>
     <OnPress>
@@ -251,8 +251,8 @@ ButtonSet("EButton1" ,"Font_Color" , "#FFAB00");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton2" ,"Font_Color" , "#FF00ff");
-</OnDown>
+ButtonSet("EButton2" ,"Color" , "#00FF00");
+ButtonSet("EButton2" ,"ColorTo" , "#321212");</OnDown>
     <OnClick>
     </OnClick>
     <OnPress>
@@ -397,8 +397,8 @@ ChangeScreenSet("Screen2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton1" ,"Font_Color" , "#FF0000");
-</OnDown>
+ButtonSet("EButton1" ,"Color" , "#008080");
+ButtonSet("EButton1" ,"ColorTo" , "#321212");</OnDown>
     <OnClick>
     </OnClick>
     <OnPress>
@@ -447,8 +447,8 @@ ButtonSet("EButton1" ,"Font_Color" , "#FF0000");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton2" ,"Font_Color" , "#FF00FF");
-</OnDown>
+ButtonSet("EButton2" ,"Color" , "#808080");
+ButtonSet("EButton2" ,"ColorTo" , "#321212");</OnDown>
     <OnClick>
     </OnClick>
     <OnPress>
