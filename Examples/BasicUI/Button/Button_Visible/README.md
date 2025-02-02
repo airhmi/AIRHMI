@@ -1,4 +1,4 @@
-# Buton Görünürlük Olasılıkları
+# Buton Görünürlük Özelliği
 
 Bu dokümanda, statik ve dinamik olmak üzere iki farklı butonun görünürlük durumları üzerinde etkili olan faktörler incelenmiştir.
 Statik butonlar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen butonlardır. Static(false) yani dinamik butonlar ise sayfaya özgüdür.

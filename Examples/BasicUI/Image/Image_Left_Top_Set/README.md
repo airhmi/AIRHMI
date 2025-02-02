@@ -1,4 +1,4 @@
-# Image Left Top Olasılıkları
+# Image Left Top Özelliği
 
 Image nesnesinin ekran üzerindeki konumunu değiştirme işlemdir. 
 Bu dokümanda, statik ve dinamik olmak üzere iki farklı Image Text özelliği üzerinde etkili olan faktörler incelenmiştir.

@@ -1,4 +1,4 @@
-# Buton Left Top Olasılıkları
+# Buton Left Top Özelliği
 
 Butonun ekran üzerindeki konumunu değiştirme işlemdir. 
 Bu dokümanda, statik ve dinamik olmak üzere iki farklı butonun Text özelliği üzerinde etkili olan faktörler incelenmiştir.
