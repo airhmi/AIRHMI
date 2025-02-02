@@ -1,30 +1,30 @@
-# Buton Left Top Olasılıkları
+# Image Left Top Olasılıkları
 
-Butonun ekran üzerindeki konumunu değiştirme işlemdir. 
-Bu dokümanda, statik ve dinamik olmak üzere iki farklı butonun Text özelliği üzerinde etkili olan faktörler incelenmiştir.
-Statik butonlar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen butonlardır. Static(false) yani dinamik butonlar ise sayfaya özgüdür.
-Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman buton ilk hali ile baştan meydana getirilir. 
+Image nesnesinin ekran üzerindeki konumunu değiştirme işlemdir. 
+Bu dokümanda, statik ve dinamik olmak üzere iki farklı Image Text özelliği üzerinde etkili olan faktörler incelenmiştir.
+Statik Imagelar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Imagelardır. Static(false) yani dinamik Imagelar ise sayfaya özgüdür.
+Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Image ilk hali ile baştan meydana getirilir. 
 
-## 📌 1. Butonların Tanımı
-- **🟢 Statik Buton**: Static özelliği true olan butondur. Left ve Top özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
-- **🔵 Dinamik Buton**: Statik özelliği false olan butondur. Left ve Top özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
+## 📌 1. Image nesnesinin Tanımı
+- **🟢 Statik Image**: Static özelliği true olan Imagedur. Left ve Top özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
+- **🔵 Dinamik Image**: Statik özelliği false olan Imagedur. Left ve Top özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
-## 🔍 2. Buton Left ve Top Değiştirme Durumları
+## 🔍 2. Image Left ve Top Değiştirme Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
-- Kullanıcı **statik butonun Left ve Top değerini** değiştirebilir.
-- Kullanıcı **dinamik butonun Left ve Top değerini** değiştirebilir.
+- Kullanıcı **statik Image Left ve Top değerini** değiştirebilir.
+- Kullanıcı **dinamik Image Left ve Top değerini** değiştirebilir.
 
 
 ### 🔄 Farklı Sayfadan Olası Senaryolar
-- Kullanıcı **statik butonun Left ve Top değerini** değiştirebilir.
-- Kullanıcı **dinamik butonun Left ve Top değerini değiştiremez.**
-- **Statik buton**, farklı sayfadan Left ve Top değerini değiştirirsek, aynı sayfaya dönüldüğünde **yeni değiştirilen text değeri gelir.**
-- **Dinamik butonun Left ve Top değerini değiştirsek bile etki etmez.**
+- Kullanıcı **statik Image Left ve Top değerini** değiştirebilir.
+- Kullanıcı **dinamik Image Left ve Top değerini değiştiremez.**
+- **Statik Image**, farklı sayfadan Left ve Top değerini değiştirirsek, aynı sayfaya dönüldüğünde **yeni değiştirilen text değeri gelir.**
+- **Dinamik Image Left ve Top değerini değiştirsek bile etki etmez.**
 
 ## 🎯 4. Sonuç
-✔️ Aynı sayfada **her iki butonun Left ve Top değerini değiştirilebilir**.  
-✔️ **Statik butonun Left ve Top değerini** diğer sayfalardan değiştirilebilir.  
-✔️ **Dinamik butonun Left ve Top değerini** yalnızca oluşturulduğu sayfada değiştirilebilir.  
+✔️ Aynı sayfada **her iki Image Left ve Top değerini değiştirilebilir**.  
+✔️ **Statik Image Left ve Top değerini** diğer sayfalardan değiştirilebilir.  
+✔️ **Dinamik Image Left ve Top değerini** yalnızca oluşturulduğu sayfada değiştirilebilir.  
 
 
 ![Açıklama Metni](1.png)
