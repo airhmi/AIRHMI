@@ -33,5 +33,4 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 
 ![Açıklama Metni](3.png)
 
-![Açıklama Metni](4.png)
 
