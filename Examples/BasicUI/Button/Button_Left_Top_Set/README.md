@@ -9,7 +9,7 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 - **🟢 Statik Buton**: Static özelliği true olan butondur. Left ve Top özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
 - **🔵 Dinamik Buton**: Statik özelliği false olan butondur. Left ve Top özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
-## 🔍 2. Buton Text Caption Değiştirme Durumları
+## 🔍 2. Buton Left ve Top Değiştirme Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
 - Kullanıcı **statik butonun Left ve Top değerini** değiştirebilir.
 - Kullanıcı **dinamik butonun Left ve Top değerini** değiştirebilir.
