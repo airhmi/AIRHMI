@@ -166,7 +166,7 @@
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Set Text</Caption>
+    <Caption>Get Text</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -201,7 +201,12 @@
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton1" ,"Text" , "Hello World!");
+
+char data[100];
+
+ButtonGet("EButton1" ,"Text" , data);
+
+LabelSet("ELabelBox5" ,"Text" , data);
 </OnDown>
     <OnClick>
     </OnClick>
@@ -216,7 +221,7 @@ ButtonSet("EButton1" ,"Text" , "Hello World!");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Set Text</Caption>
+    <Caption>Get Text</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -251,7 +256,12 @@ ButtonSet("EButton1" ,"Text" , "Hello World!");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton2" ,"Text" , "Hello World 2!");
+
+char data[100];
+
+ButtonGet("EButton2" ,"Text" , data);
+
+LabelSet("ELabelBox6" ,"Text" , data);
 </OnDown>
     <OnClick>
     </OnClick>
@@ -329,6 +339,46 @@ ChangeScreenSet("Screen2");
     <Tag>255</Tag>
     <Order />
   </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox5</name>
+    <Width>202</Width>
+    <Height>50</Height>
+    <Left>100</Left>
+    <Top>303</Top>
+    <Locked>False</Locked>
+    <Caption>Text</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox6</name>
+    <Width>202</Width>
+    <Height>50</Height>
+    <Left>501</Left>
+    <Top>303</Top>
+    <Locked>False</Locked>
+    <Caption>Text</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
 </AirPanelPC>
 ~SCREEN:Screen1~FSCREEN:
 <?xml version="1.0" encoding="utf-8"?>
@@ -362,7 +412,7 @@ ChangeScreenSet("Screen2");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Set Text</Caption>
+    <Caption>Get Text</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -397,7 +447,12 @@ ChangeScreenSet("Screen2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton1" ,"Text" , "Btn Set Page 2");
+
+char data[100];
+
+ButtonGet("EButton1" ,"Text" , data);
+
+LabelSet("ELabelBox7" ,"Text" , data);
 </OnDown>
     <OnClick>
     </OnClick>
@@ -412,7 +467,7 @@ ButtonSet("EButton1" ,"Text" , "Btn Set Page 2");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Set Text</Caption>
+    <Caption>Get Text</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -447,7 +502,12 @@ ButtonSet("EButton1" ,"Text" , "Btn Set Page 2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton2" ,"Text" , "Btn Set Page 2");
+
+char data[100];
+
+ButtonGet("EButton2" ,"Text" , data);
+
+LabelSet("ELabelBox8" ,"Text" , data);
 </OnDown>
     <OnClick>
     </OnClick>
@@ -513,6 +573,46 @@ ChangeScreenSet("Screen1");
     <Top>16</Top>
     <Locked>False</Locked>
     <Caption>Page 2</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox7</name>
+    <Width>202</Width>
+    <Height>50</Height>
+    <Left>99</Left>
+    <Top>317</Top>
+    <Locked>False</Locked>
+    <Caption>Text</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox8</name>
+    <Width>202</Width>
+    <Height>50</Height>
+    <Left>499</Left>
+    <Top>317</Top>
+    <Locked>False</Locked>
+    <Caption>Text</Caption>
     <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
     <FontSize>24</FontSize>
