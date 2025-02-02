@@ -10,7 +10,7 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 - **🟢 Statik Buton**: Static özelliği true olan butondur. pushpull özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
 - **🔵 Dinamik Buton**: Statik özelliği false olan butondur. pushpull  özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
-## 🔍 2. Buton Font_pushpull Değiştirme Durumları
+## 🔍 2. Buton pushpull Değiştirme Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
 - Kullanıcı **statik butonun pushpull değerini** değiştirebilir.
 - Kullanıcı **dinamik butonun pushpull değerini** değiştirebilir.
