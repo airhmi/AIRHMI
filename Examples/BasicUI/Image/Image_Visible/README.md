@@ -1,4 +1,4 @@
-# Image Görünürlük Olasılıkları
+# Image Görünürlük Özelliği
 
 Bu dokümanda, statik ve dinamik olmak üzere iki farklı Image görünürlük durumları üzerinde etkili olan faktörler incelenmiştir.
 Statik Imagelar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Imagelardır. Static(false) yani dinamik Imagelar ise sayfaya özgüdür.
