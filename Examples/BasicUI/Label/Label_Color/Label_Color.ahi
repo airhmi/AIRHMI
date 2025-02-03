@@ -70,7 +70,7 @@
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Set Position</Caption>
+    <Caption>Set Color</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -105,8 +105,7 @@
     </OnUp>
     <OnDown>#include "stk.h"
 
-LabelSet("ELabelBox5" ,"Left" , "50");
-LabelSet("ELabelBox5" ,"Top" , "50");
+LabelSet("ELabel1" ,"Color" , "#FFAB00");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -121,7 +120,7 @@ LabelSet("ELabelBox5" ,"Top" , "50");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Set Position</Caption>
+    <Caption>Set Color</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -156,8 +155,7 @@ LabelSet("ELabelBox5" ,"Top" , "50");
     </OnUp>
     <OnDown>#include "stk.h"
 
-LabelSet("ELabelBox6" ,"Left" , "550");
-LabelSet("ELabelBox6" ,"Top" , "50");
+LabelSet("ELabel2" ,"Color" , "#00FF00");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -235,45 +233,63 @@ ChangeScreenSet("Screen2");
     <Tag>255</Tag>
     <Order />
   </Controls>
-  <Controls ID="ELabelBox">
-    <name>ELabelBox5</name>
-    <Width>196</Width>
-    <Height>92</Height>
-    <Left>102</Left>
-    <Top>205</Top>
+  <Controls ID="ELabel">
+    <name>ELabel1</name>
+    <Left>146</Left>
+    <Top>236</Top>
     <Locked>False</Locked>
-    <Caption>ELabelBox1</Caption>
+    <Caption>ELabel1</Caption>
     <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
     <FontSize>24</FontSize>
     <Font_Color>-65536</Font_Color>
-    <TextAligment>Center</TextAligment>
+    <TextAligment>Start</TextAligment>
     <Visible>True</Visible>
     <Active>True</Active>
-    <Opacity>20</Opacity>
+    <Opacity>100</Opacity>
     <Static>True</Static>
     <Tag>255</Tag>
     <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
   </Controls>
-  <Controls ID="ELabelBox">
-    <name>ELabelBox6</name>
-    <Width>196</Width>
-    <Height>92</Height>
-    <Left>503</Left>
-    <Top>205</Top>
+  <Controls ID="ELabel">
+    <name>ELabel2</name>
+    <Left>542</Left>
+    <Top>234</Top>
     <Locked>False</Locked>
-    <Caption>ELabelBox2</Caption>
+    <Caption>ELabel2</Caption>
     <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
     <FontSize>24</FontSize>
     <Font_Color>-65536</Font_Color>
-    <TextAligment>Center</TextAligment>
+    <TextAligment>Start</TextAligment>
     <Visible>True</Visible>
     <Active>True</Active>
-    <Opacity>20</Opacity>
+    <Opacity>100</Opacity>
     <Static>False</Static>
     <Tag>255</Tag>
     <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
   </Controls>
 </AirPanelPC>
 ~SCREEN:Screen1~FSCREEN:
@@ -308,7 +324,7 @@ ChangeScreenSet("Screen2");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Set Position</Caption>
+    <Caption>Set Color</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -343,8 +359,7 @@ ChangeScreenSet("Screen2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-LabelSet("ELabelBox5" ,"Left" , "50");
-LabelSet("ELabelBox5" ,"Top" , "150");
+LabelSet("ELabel1" ,"Color" , "#008080");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -359,7 +374,7 @@ LabelSet("ELabelBox5" ,"Top" , "150");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Set Position</Caption>
+    <Caption>Set Color</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -394,8 +409,7 @@ LabelSet("ELabelBox5" ,"Top" , "150");
     </OnUp>
     <OnDown>#include "stk.h"
 
-LabelSet("ELabelBox6" ,"Left" , "550");
-LabelSet("ELabelBox6" ,"Top" , "150");
+LabelSet("ELabel2" ,"Color" , "#808080");
 </OnDown>
     <OnClick>
     </OnClick>
