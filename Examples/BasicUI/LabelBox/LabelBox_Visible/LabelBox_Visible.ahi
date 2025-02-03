@@ -22,102 +22,6 @@
     <BackgroundPictureHex>
     </BackgroundPictureHex>
   </Controls>
-  <Controls ID="EButton">
-    <name>EButton1</name>
-    <Left>100</Left>
-    <Top>200</Top>
-    <Width>200</Width>
-    <Height>100</Height>
-    <TextAligment>Center</TextAligment>
-    <Locked>True</Locked>
-    <Caption>EButton1</Caption>
-    <SoundOnOff>False</SoundOnOff>
-    <SoundName>Sound1</SoundName>
-    <SoundVolume>40</SoundVolume>
-    <FontName>Roboto</FontName>
-    <FontName2>
-    </FontName2>
-    <FontType>System Font</FontType>
-    <FontSize>22</FontSize>
-    <Font_Color>-16777216</Font_Color>
-    <Visible>True</Visible>
-    <VisibleDesing>True</VisibleDesing>
-    <Active>True</Active>
-    <PushPull>False</PushPull>
-    <Opacity>100</Opacity>
-    <Color>-1</Color>
-    <ColorTo>-16728065</ColorTo>
-    <Press_Color>-1</Press_Color>
-    <Press_ColorTo>-4144960</Press_ColorTo>
-    <PressFontColor>-1</PressFontColor>
-    <PressCaption>Press Text</PressCaption>
-    <Gradient>Top to Bottom</Gradient>
-    <Static>True</Static>
-    <Permanent>False</Permanent>
-    <Pen_Color>-16777216</Pen_Color>
-    <Pen_Width>1</Pen_Width>
-    <Effect>0</Effect>
-    <EffectTime>100</EffectTime>
-    <Placement>1</Placement>
-    <Tag>255</Tag>
-    <Order />
-    <OnUp>
-    </OnUp>
-    <OnDown>
-    </OnDown>
-    <OnClick>
-    </OnClick>
-    <OnPress>
-    </OnPress>
-  </Controls>
-  <Controls ID="EButton">
-    <name>EButton2</name>
-    <Left>500</Left>
-    <Top>200</Top>
-    <Width>200</Width>
-    <Height>100</Height>
-    <TextAligment>Center</TextAligment>
-    <Locked>True</Locked>
-    <Caption>EButton2</Caption>
-    <SoundOnOff>False</SoundOnOff>
-    <SoundName>Sound1</SoundName>
-    <SoundVolume>40</SoundVolume>
-    <FontName>Roboto</FontName>
-    <FontName2>
-    </FontName2>
-    <FontType>System Font</FontType>
-    <FontSize>22</FontSize>
-    <Font_Color>-16777216</Font_Color>
-    <Visible>True</Visible>
-    <VisibleDesing>True</VisibleDesing>
-    <Active>True</Active>
-    <PushPull>False</PushPull>
-    <Opacity>100</Opacity>
-    <Color>-1</Color>
-    <ColorTo>-16728065</ColorTo>
-    <Press_Color>-1</Press_Color>
-    <Press_ColorTo>-4144960</Press_ColorTo>
-    <PressFontColor>-1</PressFontColor>
-    <PressCaption>Press Text</PressCaption>
-    <Gradient>Top to Bottom</Gradient>
-    <Static>False</Static>
-    <Permanent>False</Permanent>
-    <Pen_Color>-16777216</Pen_Color>
-    <Pen_Width>1</Pen_Width>
-    <Effect>0</Effect>
-    <EffectTime>100</EffectTime>
-    <Placement>1</Placement>
-    <Tag>255</Tag>
-    <Order />
-    <OnUp>
-    </OnUp>
-    <OnDown>
-    </OnDown>
-    <OnClick>
-    </OnClick>
-    <OnPress>
-    </OnPress>
-  </Controls>
   <Controls ID="ELabelBox">
     <name>ELabelBox1</name>
     <Width>100</Width>
@@ -166,7 +70,7 @@
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Set Color</Caption>
+    <Caption>Visible On</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -201,7 +105,8 @@
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton1" ,"Font_Color" , "#FFAB00");
+LabelSet("ELabelBox5" ,"Visible" , "True");
+LabelSet("ELabelBox6" ,"Visible" , "True");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -216,7 +121,7 @@ ButtonSet("EButton1" ,"Font_Color" , "#FFAB00");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Set Color</Caption>
+    <Caption>Visisble Off</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -251,7 +156,8 @@ ButtonSet("EButton1" ,"Font_Color" , "#FFAB00");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton2" ,"Font_Color" , "#FF00ff");
+LabelSet("ELabelBox5" ,"Visible" , "False");
+LabelSet("ELabelBox6" ,"Visible" , "False");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -329,6 +235,46 @@ ChangeScreenSet("Screen2");
     <Tag>255</Tag>
     <Order />
   </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox5</name>
+    <Width>192</Width>
+    <Height>95</Height>
+    <Left>104</Left>
+    <Top>203</Top>
+    <Locked>False</Locked>
+    <Caption>ELabelBox1</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>True</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox6</name>
+    <Width>192</Width>
+    <Height>95</Height>
+    <Left>504</Left>
+    <Top>204</Top>
+    <Locked>False</Locked>
+    <Caption>ELabelBox2</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
 </AirPanelPC>
 ~SCREEN:Screen1~FSCREEN:
 <?xml version="1.0" encoding="utf-8"?>
@@ -362,7 +308,7 @@ ChangeScreenSet("Screen2");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Set Color</Caption>
+    <Caption>Visible On</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -397,7 +343,8 @@ ChangeScreenSet("Screen2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton1" ,"Font_Color" , "#FF0000");
+LabelSet("ELabelBox5" ,"Visible" , "True");
+LabelSet("ELabelBox6" ,"Visible" , "True");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -412,7 +359,7 @@ ButtonSet("EButton1" ,"Font_Color" , "#FF0000");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Set Color</Caption>
+    <Caption>Visisble Off</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -447,7 +394,8 @@ ButtonSet("EButton1" ,"Font_Color" , "#FF0000");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ButtonSet("EButton2" ,"Font_Color" , "#FF00FF");
+LabelSet("ELabelBox5" ,"Visible" , "False");
+LabelSet("ELabelBox6" ,"Visible" , "False");
 </OnDown>
     <OnClick>
     </OnClick>
