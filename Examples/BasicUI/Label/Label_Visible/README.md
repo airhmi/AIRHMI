@@ -40,7 +40,7 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 Bu bilgiler ışığında, **görünürlük değişikliklerinin beklenen sonuçları doğru şekilde ele alınmalıdır.** 🚀
 
 # Projenin Çalıştırlması
-## **1 - Proje ilk sayfa agörünümü**
+## **1 - Proje ilk sayfa görünümü**
 
 ![Açıklama Metni](1.png)
 
