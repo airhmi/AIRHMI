@@ -39,10 +39,18 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 
 Bu bilgiler ışığında, **görünürlük değişikliklerinin beklenen sonuçları doğru şekilde ele alınmalıdır.** 🚀
 
+## **Proje ilk sayf agörünümü**
+
 ![Açıklama Metni](1.png)
+
+## **Visible Off Butonuna basılır**
 
 ![Açıklama Metni](2.png)
 
+## **2.Sayfaya Geçilir. Visible Off Butonuna basılıp , tekrar 1. sayfaya dönülür.**
+
 ![Açıklama Metni](3.png)
+
+## **Statik olan bu durumdan etkilenir. Dinamik olan ise ilk halinde visible On olduğu için aynı şekilde kalır.**
 
 ![Açıklama Metni](4.png)
