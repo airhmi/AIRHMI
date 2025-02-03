@@ -105,7 +105,7 @@
     </OnUp>
     <OnDown>#include "stk.h"
 
-LabelSet("ELabelBox5" ,"Text" , "Hello World!");
+LabelSet("ELabel1" ,"Text" , "Hello World!");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -155,7 +155,7 @@ LabelSet("ELabelBox5" ,"Text" , "Hello World!");
     </OnUp>
     <OnDown>#include "stk.h"
 
-LabelSet("ELabelBox6" ,"Text" , "Hello World 2!");
+LabelSet("ELabel2" ,"Text" , "Hello World 2!");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -233,45 +233,63 @@ ChangeScreenSet("Screen2");
     <Tag>255</Tag>
     <Order />
   </Controls>
-  <Controls ID="ELabelBox">
-    <name>ELabelBox5</name>
-    <Width>304</Width>
-    <Height>82</Height>
-    <Left>49</Left>
-    <Top>212</Top>
+  <Controls ID="ELabel">
+    <name>ELabel1</name>
+    <Left>153</Left>
+    <Top>236</Top>
     <Locked>False</Locked>
-    <Caption>ELabelBox1</Caption>
+    <Caption>ELabel1</Caption>
     <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
     <FontSize>24</FontSize>
     <Font_Color>-65536</Font_Color>
-    <TextAligment>Center</TextAligment>
+    <TextAligment>Start</TextAligment>
     <Visible>True</Visible>
     <Active>True</Active>
-    <Opacity>20</Opacity>
+    <Opacity>100</Opacity>
     <Static>True</Static>
     <Tag>255</Tag>
     <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
   </Controls>
-  <Controls ID="ELabelBox">
-    <name>ELabelBox6</name>
-    <Width>306</Width>
-    <Height>77</Height>
-    <Left>460</Left>
-    <Top>212</Top>
+  <Controls ID="ELabel">
+    <name>ELabel2</name>
+    <Left>539</Left>
+    <Top>235</Top>
     <Locked>False</Locked>
-    <Caption>ELabelBox2</Caption>
+    <Caption>ELabel2</Caption>
     <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
     <FontSize>24</FontSize>
     <Font_Color>-65536</Font_Color>
-    <TextAligment>Center</TextAligment>
+    <TextAligment>Start</TextAligment>
     <Visible>True</Visible>
     <Active>True</Active>
-    <Opacity>20</Opacity>
+    <Opacity>100</Opacity>
     <Static>False</Static>
     <Tag>255</Tag>
     <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
   </Controls>
 </AirPanelPC>
 ~SCREEN:Screen1~FSCREEN:
@@ -341,7 +359,7 @@ ChangeScreenSet("Screen2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-LabelSet("ELabelBox5" ,"Text" , "Set Page 2");
+LabelSet("ELabel1" ,"Text" , "Set Page 2");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -391,7 +409,7 @@ LabelSet("ELabelBox5" ,"Text" , "Set Page 2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-LabelSet("ELabelBox6" ,"Text" , "Btn Set Page 2");
+LabelSet("ELabel2" ,"Text" , "Btn Set Page 2");
 </OnDown>
     <OnClick>
     </OnClick>
