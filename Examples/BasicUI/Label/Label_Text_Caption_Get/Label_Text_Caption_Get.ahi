@@ -108,7 +108,7 @@
 
 char data[100];
 
-LabelGet("ELabelBox9" ,"Text" , data);
+LabelGet("ELabel1" ,"Text" , data);
 
 LabelSet("ELabelBox5" ,"Text" , data);
 </OnDown>
@@ -163,7 +163,7 @@ LabelSet("ELabelBox5" ,"Text" , data);
 
 char data[100];
 
-LabelGet("ELabelBox10" ,"Text" , data);
+LabelGet("ELabel2" ,"Text" , data);
 
 LabelSet("ELabelBox6" ,"Text" , data);
 </OnDown>
@@ -283,45 +283,63 @@ ChangeScreenSet("Screen2");
     <Tag>255</Tag>
     <Order />
   </Controls>
-  <Controls ID="ELabelBox">
-    <name>ELabelBox9</name>
-    <Width>194</Width>
-    <Height>92</Height>
-    <Left>103</Left>
-    <Top>205</Top>
+  <Controls ID="ELabel">
+    <name>ELabel1</name>
+    <Left>147</Left>
+    <Top>231</Top>
     <Locked>False</Locked>
-    <Caption>ELabelBox1</Caption>
+    <Caption>ELabel1</Caption>
     <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
     <FontSize>24</FontSize>
     <Font_Color>-65536</Font_Color>
-    <TextAligment>Center</TextAligment>
+    <TextAligment>Start</TextAligment>
     <Visible>True</Visible>
     <Active>True</Active>
-    <Opacity>20</Opacity>
+    <Opacity>100</Opacity>
     <Static>True</Static>
     <Tag>255</Tag>
     <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
   </Controls>
-  <Controls ID="ELabelBox">
-    <name>ELabelBox10</name>
-    <Width>194</Width>
-    <Height>92</Height>
-    <Left>505</Left>
-    <Top>204</Top>
+  <Controls ID="ELabel">
+    <name>ELabel2</name>
+    <Left>541</Left>
+    <Top>232</Top>
     <Locked>False</Locked>
-    <Caption>ELabelBox2</Caption>
+    <Caption>ELabel2</Caption>
     <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
     <FontSize>24</FontSize>
     <Font_Color>-65536</Font_Color>
-    <TextAligment>Center</TextAligment>
+    <TextAligment>Start</TextAligment>
     <Visible>True</Visible>
     <Active>True</Active>
-    <Opacity>20</Opacity>
+    <Opacity>100</Opacity>
     <Static>False</Static>
     <Tag>255</Tag>
     <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
   </Controls>
 </AirPanelPC>
 ~SCREEN:Screen1~FSCREEN:
@@ -394,7 +412,7 @@ ChangeScreenSet("Screen2");
 
 char data[100];
 
-LabelGet("ELabelBox9" ,"Text" , data);
+LabelGet("ELabel1" ,"Text" , data);
 
 LabelSet("ELabelBox7" ,"Text" , data);
 </OnDown>
@@ -449,7 +467,7 @@ LabelSet("ELabelBox7" ,"Text" , data);
 
 char data[100];
 
-LabelGet("ELabelBox10" ,"Text" , data);
+LabelGet("ELabel2" ,"Text" , data);
 
 LabelSet("ELabelBox8" ,"Text" , data);
 </OnDown>
