@@ -3,6 +3,7 @@
 Toggle durumunu yazılım ile set etmek için kullanılır.
 
 ToggleSet("Toggle1" ,"State" , "1"); // on durumuna geçirir.
+
 ToggleSet("Toggle2" ,"State" , "0"); // off durumuna geçirir.
 
 Statik ve dinamik olmak üzere iki farklı Toggle State Set durumları üzerinde etkili olan faktörler incelenmiştir.
