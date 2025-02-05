@@ -28,4 +28,9 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 
 ![Açıklama Metni](1.png)
 
+![Açıklama Metni](2.png)
+
+![Açıklama Metni](3.png)
+
+![Açıklama Metni](4.png)
 
