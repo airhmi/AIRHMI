@@ -4,9 +4,9 @@ Bu dokümanda, statik ve dinamik olmak üzere iki farklı Toggle görünürlük 
 Statik Togglelar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Togglelardır. Static(false) yani dinamik Togglelar ise sayfaya özgüdür.
 Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Toggle ilk hali ile baştan meydana getirilir. 
 
-## 📌 1. Toggleların Tanımı
-- **🟢 Statik Toggle**: Static özelliği true olan Toggledur. Görünürlük (`Visible`) özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
-- **🔵 Dinamik Toggle**: Statik özelliği false olan Toggledur. Görünürlük (`Visible`) özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
+## 📌 1. Toggle Tanımı
+- **🟢 Statik Toggle**: Static özelliği true olan Toggle dır. Görünürlük (`Visible`) özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
+- **🔵 Dinamik Toggle**: Statik özelliği false olan Toggle dır. Görünürlük (`Visible`) özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
 ## 🔍 2. Toggle Görünürlük Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
