@@ -2,10 +2,11 @@
 
 Toggle durumunu yazılım ile Get etmek için kullanılır.
 
+```
 char data[100];
 
 ToggleGet("Toggle1" ,"State" , data);  // off durumu için 0 , on durumu için 1 gönderir.
-
+```
 
 Statik ve dinamik olmak üzere iki farklı Toggle State Get durumları üzerinde etkili olan faktörler incelenmiştir.
 Statik Toggle lar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen nesnelerdir. Static(false) yani dinamik Toggle lar ise sayfaya özgüdür.
