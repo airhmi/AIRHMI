@@ -44,6 +44,8 @@ Bu bilgiler ışığında, **State Set değişikliklerinin beklenen sonuçları 
 
 ![Açıklama Metni](3.png)
 
+## 2.Sayfadan 1.sayfadaki her iki toggle'i da on yaptık. Fakat 2.toggle dinamik olduğu için ilk haline geri döndü. 1. toggle ise on konumuna geçti. 
+
 ![Açıklama Metni](4.png)
 
 
