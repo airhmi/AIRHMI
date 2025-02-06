@@ -5,7 +5,7 @@ Bu dokümanda, statik ve dinamik olmak üzere iki farklı Label Active özelliğ
 Statik Labellar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Labellardır. Static(false) yani dinamik Labellar ise sayfaya özgüdür.
 Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Label ilk hali ile baştan meydana getirilir. 
 
-## 📌 1. Labelların Tanımı
+## 📌 1. Label Tanımı
 - **🟢 Statik Label**: Static özelliği true olan Labeldur. Active özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
 - **🔵 Dinamik Label**: Statik özelliği false olan Labeldur. Active  özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
