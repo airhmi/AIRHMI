@@ -2,10 +2,11 @@
 
 Toggle durumunu yazılım ile set etmek için kullanılır.
 
+```
 ToggleSet("Toggle1" ,"State" , "1"); // on durumuna geçirir.
 
 ToggleSet("Toggle2" ,"State" , "0"); // off durumuna geçirir.
-
+```
 Statik ve dinamik olmak üzere iki farklı Toggle State Set durumları üzerinde etkili olan faktörler incelenmiştir.
 Statik Toggle lar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen nesnelerdir. Static(false) yani dinamik Toggle lar ise sayfaya özgüdür.
 Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Toggle ilk hali ile baştan meydana getirilir. 
