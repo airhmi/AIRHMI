@@ -4,7 +4,7 @@ Bu dokümanda, **statik** ve **dinamik** olmak üzere iki farklı **Label** reng
 **Statik Labellar**, her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen **Label**'lardır.  
 **Static(false)** yani **dinamik Labellar** ise **sayfaya özgüdür**. Sayfa değiştiği zaman hiçbir özelliği korunmaz. Sayfa değişip tekrar aynı sayfaya gidildiğinde **Label**, ilk hâli ile yeniden oluşturulur.
 
-## 📌 1. Labelların Tanımı
+## 📌 1. Label Tanımı
 - **🟢 Statik Label**: **Static** özelliği **true** olan **Label**'dır. **Color** özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
 - **🔵 Dinamik Label**: **Static** özelliği **false** olan **Label**'dır. **Color** özelliği **yalnızca aynı sayfada** değiştirilebilir, **diğer sayfalardan değiştirilemez**.
 
