@@ -135,7 +135,7 @@ File_write("EFile1_fileName.txt",buffer,strlen(buffer),1);
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Read File</Caption>
+    <Caption>File Size</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -169,10 +169,13 @@ File_write("EFile1_fileName.txt",buffer,strlen(buffer),1);
     <OnUp>
     </OnUp>
     <OnDown>#include "stk.h"
+#include "stdio.h"
 
 char data[50];
-File_read("EFile1_fileName.txt",data,50,1);
 
+int size = File_Size("EFile1_fileName.txt");
+
+sprintf(data,"Size:%d",size);
 LabelSet("ELabelBox6" ,"Caption"  , data );
 
 </OnDown>
@@ -294,201 +297,3 @@ ChangeScreenSet("Screen2");
   </Controls>
 </AirPanelPC>
 ~SCREEN:Screen1~FSCREEN:
-<?xml version="1.0" encoding="utf-8"?>
-<AirPanelPC>
-  <Controls ID="Options">
-    <DeviceComPort>
-    </DeviceComPort>
-    <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>usb</UploadInterface>
-    <ofs>Screen1</ofs>
-    <StartVideoStorage>Flash</StartVideoStorage>
-  </Controls>
-  <Controls ID="Screen">
-    <OnStart>
-    </OnStart>
-    <Functions>
-    </Functions>
-    <BgColor>-16777216</BgColor>
-    <Name>Screen2</Name>
-    <Rotate>Horizontal</Rotate>
-    <Background_Image>
-    </Background_Image>
-    <BackgroundPictureHex>
-    </BackgroundPictureHex>
-  </Controls>
-  <Controls ID="EButton">
-    <name>EButton6</name>
-    <Left>100</Left>
-    <Top>200</Top>
-    <Width>200</Width>
-    <Height>100</Height>
-    <TextAligment>Center</TextAligment>
-    <Locked>False</Locked>
-    <Caption>Visible On</Caption>
-    <SoundOnOff>False</SoundOnOff>
-    <SoundName>Sound1</SoundName>
-    <SoundVolume>40</SoundVolume>
-    <FontName>Roboto</FontName>
-    <FontName2>
-    </FontName2>
-    <FontType>System Font</FontType>
-    <FontSize>24</FontSize>
-    <Font_Color>-16711936</Font_Color>
-    <Visible>True</Visible>
-    <VisibleDesing>True</VisibleDesing>
-    <Active>True</Active>
-    <PushPull>False</PushPull>
-    <Opacity>100</Opacity>
-    <Color>-1</Color>
-    <ColorTo>-16728065</ColorTo>
-    <Press_Color>-1</Press_Color>
-    <Press_ColorTo>-4144960</Press_ColorTo>
-    <PressFontColor>-1</PressFontColor>
-    <PressCaption>Press Text</PressCaption>
-    <Gradient>Top to Bottom</Gradient>
-    <Static>True</Static>
-    <Permanent>False</Permanent>
-    <Pen_Color>-16777216</Pen_Color>
-    <Pen_Width>1</Pen_Width>
-    <Effect>0</Effect>
-    <EffectTime>100</EffectTime>
-    <Placement>1</Placement>
-    <Tag>255</Tag>
-    <Order />
-    <OnUp>
-    </OnUp>
-    <OnDown>#include "stk.h"
-
-ButtonSet("EButton1" ,"Visible" , "True");
-ButtonSet("EButton2" ,"Visible" , "True");
-</OnDown>
-    <OnClick>
-    </OnClick>
-    <OnPress>
-    </OnPress>
-  </Controls>
-  <Controls ID="EButton">
-    <name>EButton7</name>
-    <Left>500</Left>
-    <Top>200</Top>
-    <Width>200</Width>
-    <Height>100</Height>
-    <TextAligment>Center</TextAligment>
-    <Locked>False</Locked>
-    <Caption>Visisble Off</Caption>
-    <SoundOnOff>False</SoundOnOff>
-    <SoundName>Sound1</SoundName>
-    <SoundVolume>40</SoundVolume>
-    <FontName>Roboto</FontName>
-    <FontName2>
-    </FontName2>
-    <FontType>System Font</FontType>
-    <FontSize>24</FontSize>
-    <Font_Color>-65536</Font_Color>
-    <Visible>True</Visible>
-    <VisibleDesing>True</VisibleDesing>
-    <Active>True</Active>
-    <PushPull>False</PushPull>
-    <Opacity>100</Opacity>
-    <Color>-1</Color>
-    <ColorTo>-16728065</ColorTo>
-    <Press_Color>-1</Press_Color>
-    <Press_ColorTo>-4144960</Press_ColorTo>
-    <PressFontColor>-1</PressFontColor>
-    <PressCaption>Press Text</PressCaption>
-    <Gradient>Top to Bottom</Gradient>
-    <Static>True</Static>
-    <Permanent>False</Permanent>
-    <Pen_Color>-16777216</Pen_Color>
-    <Pen_Width>1</Pen_Width>
-    <Effect>0</Effect>
-    <EffectTime>100</EffectTime>
-    <Placement>1</Placement>
-    <Tag>255</Tag>
-    <Order />
-    <OnUp>
-    </OnUp>
-    <OnDown>#include "stk.h"
-
-ButtonSet("EButton1" ,"Visible" , "False");
-ButtonSet("EButton2" ,"Visible" , "False");
-</OnDown>
-    <OnClick>
-    </OnClick>
-    <OnPress>
-    </OnPress>
-  </Controls>
-  <Controls ID="EButton">
-    <name>EButton8</name>
-    <Left>300</Left>
-    <Top>0</Top>
-    <Width>200</Width>
-    <Height>100</Height>
-    <TextAligment>Center</TextAligment>
-    <Locked>False</Locked>
-    <Caption>Next Page</Caption>
-    <SoundOnOff>False</SoundOnOff>
-    <SoundName>Sound1</SoundName>
-    <SoundVolume>40</SoundVolume>
-    <FontName>Roboto</FontName>
-    <FontName2>
-    </FontName2>
-    <FontType>System Font</FontType>
-    <FontSize>24</FontSize>
-    <Font_Color>-16777216</Font_Color>
-    <Visible>True</Visible>
-    <VisibleDesing>True</VisibleDesing>
-    <Active>True</Active>
-    <PushPull>False</PushPull>
-    <Opacity>100</Opacity>
-    <Color>-1</Color>
-    <ColorTo>-16728065</ColorTo>
-    <Press_Color>-1</Press_Color>
-    <Press_ColorTo>-4144960</Press_ColorTo>
-    <PressFontColor>-1</PressFontColor>
-    <PressCaption>Press Text</PressCaption>
-    <Gradient>Top to Bottom</Gradient>
-    <Static>True</Static>
-    <Permanent>False</Permanent>
-    <Pen_Color>-16777216</Pen_Color>
-    <Pen_Width>1</Pen_Width>
-    <Effect>0</Effect>
-    <EffectTime>100</EffectTime>
-    <Placement>1</Placement>
-    <Tag>255</Tag>
-    <Order />
-    <OnUp>
-    </OnUp>
-    <OnDown>#include "stk.h"
-
-ChangeScreenSet("Screen1");
-
-</OnDown>
-    <OnClick>
-    </OnClick>
-    <OnPress>
-    </OnPress>
-  </Controls>
-  <Controls ID="ELabelBox">
-    <name>ELabelBox4</name>
-    <Width>129</Width>
-    <Height>50</Height>
-    <Left>15</Left>
-    <Top>16</Top>
-    <Locked>False</Locked>
-    <Caption>Page 2</Caption>
-    <keyboard>None</keyboard>
-    <FontName>Roboto</FontName>
-    <FontSize>24</FontSize>
-    <Font_Color>-65536</Font_Color>
-    <TextAligment>Center</TextAligment>
-    <Visible>True</Visible>
-    <Active>True</Active>
-    <Opacity>20</Opacity>
-    <Static>False</Static>
-    <Tag>255</Tag>
-    <Order />
-  </Controls>
-</AirPanelPC>
-~SCREEN:Screen2~FSCREEN:
