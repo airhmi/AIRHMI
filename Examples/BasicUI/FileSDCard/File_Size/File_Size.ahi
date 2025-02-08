@@ -1,0 +1,299 @@
+﻿800:480;2
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>usb</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="EFile">
+    <name>EFile1</name>
+    <Locked>False</Locked>
+    <Left>13</Left>
+    <Top>12</Top>
+    <fileName>AIRHMI
+</fileName>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox1</name>
+    <Width>193</Width>
+    <Height>50</Height>
+    <Left>106</Left>
+    <Top>145</Top>
+    <Locked>False</Locked>
+    <Caption>Write Text</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox2</name>
+    <Width>193</Width>
+    <Height>50</Height>
+    <Left>463</Left>
+    <Top>145</Top>
+    <Locked>False</Locked>
+    <Caption>Read Text</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton3</name>
+    <Left>159</Left>
+    <Top>357</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>True</Locked>
+    <Caption>Write File</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16711936</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "string.h"
+
+char buffer[100];
+
+
+LabelGet("ELabelBox5" , "Text" , buffer );
+File_write("EFile1_fileName.txt",buffer,strlen(buffer),1);
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton4</name>
+    <Left>437</Left>
+    <Top>357</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>True</Locked>
+    <Caption>File Size</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+
+char data[50];
+
+int size = File_Size("EFile1_fileName.txt");
+
+sprintf(data,"Size:%d",size);
+LabelSet("ELabelBox6" ,"Caption"  , data );
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton5</name>
+    <Left>300</Left>
+    <Top>0</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>True</Locked>
+    <Caption>Next Page</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+ChangeScreenSet("Screen2");
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox3</name>
+    <Width>129</Width>
+    <Height>50</Height>
+    <Left>14</Left>
+    <Top>14</Top>
+    <Locked>False</Locked>
+    <Caption>Page 1</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox5</name>
+    <Width>204</Width>
+    <Height>50</Height>
+    <Left>100</Left>
+    <Top>230</Top>
+    <Locked>False</Locked>
+    <Caption>Hello World!</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox6</name>
+    <Width>204</Width>
+    <Height>50</Height>
+    <Left>447</Left>
+    <Top>230</Top>
+    <Locked>False</Locked>
+    <Caption>---</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:
