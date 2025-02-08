@@ -39,11 +39,12 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 
 Bu bilgiler ışığında, **görünürlük değişikliklerinin beklenen sonuçları doğru şekilde ele alınmalıdır.** 🚀
 
+## Program İlk Açılış Görüntüsü
 ![Açıklama Metni](1.png)
-
+## Herki Gauge un da visible i false yaplıyor.
 ![Açıklama Metni](2.png)
-
+## Sonraki Sayfaya geçiyoruz. Gauge visible false yapılyoruz.
 ![Açıklama Metni](3.png)
-
+## Birinci sayfaya tekrar dönüyoruz. 1.Statik olan gauge Visible off , Dinamik olan On olarak geliyor. 
 ![Açıklama Metni](4.png)
 
