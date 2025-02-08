@@ -27,8 +27,8 @@
     <Locked>False</Locked>
     <Left>13</Left>
     <Top>12</Top>
-    <fileName>AIRHMI
-</fileName>
+    <fileName>
+    </fileName>
   </Controls>
   <Controls ID="ELabelBox">
     <name>ELabelBox1</name>
@@ -120,7 +120,7 @@ char buffer[100];
 
 
 LabelGet("ELabelBox5" , "Text" , buffer );
-File_write("EFile1_fileName.txt",buffer,strlen(buffer),1);
+File_writeSD("EFile1_fileName.txt",buffer,strlen(buffer),1);
 </OnDown>
     <OnClick>
     </OnClick>
@@ -173,7 +173,7 @@ File_write("EFile1_fileName.txt",buffer,strlen(buffer),1);
 
 char data[50];
 
-int size = File_Size("EFile1_fileName.txt");
+int size = File_sizeSD("EFile1_fileName.txt");
 
 sprintf(data,"Size:%d",size);
 LabelSet("ELabelBox6" ,"Caption"  , data );
