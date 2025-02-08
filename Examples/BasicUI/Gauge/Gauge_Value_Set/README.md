@@ -27,7 +27,7 @@ Bu bilgiler ışığında, **Value Set değişikliklerinin beklenen sonuçları 
 
 ## Program İlk Açılış Görüntüsü
 ![Açıklama Metni](1.png)
-## Herki Gauge un da Velue Değeri değiştiriliyor.
+## Her iki Gauge un da Velue Değeri değiştiriliyor.
 ![Açıklama Metni](2.png)
 ## Sonraki Sayfaya geçiyoruz. Gauge velue değerini değiştiriyoruz.
 ![Açıklama Metni](3.png)
