@@ -1,7 +1,7 @@
-Gauge'dur.# Gauge Value Set Özelliği
+# Gauge Value Set Özelliği
 
 Bu dokümanda, statik ve dinamik olmak üzere iki farklı Gauge Value Set durumları üzerinde etkili olan faktörler incelenmiştir.
-Statik Gaugelar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Gaugelardır. Static(false) yani dinamik Gaugelar ise sayfaya özgüdür.
+Statik Gaugelar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Gaugelardır. Static(false) yani dinamik Gauge'lar ise sayfaya özgüdür.
 Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Gauge ilk hali ile baştan meydana getirilir. 
 
 ## 📌 1. Gaugeların Tanımı
@@ -29,7 +29,7 @@ Bu bilgiler ışığında, **Value Set değişikliklerinin beklenen sonuçları 
 ![Açıklama Metni](1.png)
 ## Herki Gauge un da Velue Değeri değiştiriliyor.
 ![Açıklama Metni](2.png)
-## Sonraki Sayfaya geçiyoruz. Gauge değerlerini set  değiştiriyoruz.
+## Sonraki Sayfaya geçiyoruz. Gauge velue değerini değiştiriyoruz.
 ![Açıklama Metni](3.png)
 ## Birinci sayfaya tekrar dönüyoruz. 1.Statik olan gauge un değeri değişmiştir. , Dinamik olan ilk değerini alır. 
 ![Açıklama Metni](4.png)
