@@ -1,0 +1,329 @@
+﻿800:480;2
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>usb</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-1</BgColor>
+    <Name>Screen1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton3</name>
+    <Left>287</Left>
+    <Top>365</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Delete</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16711936</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+ListViewDeleteX("ListView1" ,1 );
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton5</name>
+    <Left>300</Left>
+    <Top>0</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Next Page</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>False</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+ChangeScreenSet("Screen2");
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox3</name>
+    <Width>129</Width>
+    <Height>50</Height>
+    <Left>14</Left>
+    <Top>14</Top>
+    <Locked>False</Locked>
+    <Caption>Page 1</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="EListView">
+    <name>ListView1</name>
+    <Left>165</Left>
+    <Top>104</Top>
+    <Locked>False</Locked>
+    <Enabled>False</Enabled>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Header_BackGround_Color>-4144960</Header_BackGround_Color>
+    <Header_Font_Color>-65536</Header_Font_Color>
+    <Caption>165</Caption>
+    <Header_Font_Size>16</Header_Font_Size>
+    <Header_Height>50</Header_Height>
+    <Header_List>Num^Name^Surname^Number</Header_List>
+    <Header_List_Size>50^100^150^200</Header_List_Size>
+    <Header_Type>int^str^str^str</Header_Type>
+    <Grid_Vis>True</Grid_Vis>
+    <Enable_Motion>True</Enable_Motion>
+    <Grid_Font>Roboto</Grid_Font>
+    <Grid_Font_Size>16</Grid_Font_Size>
+    <Grid_Font_Color>-16777216</Grid_Font_Color>
+    <BackGround_Color>-4144960</BackGround_Color>
+    <Selected_Item_Color>-16776961</Selected_Item_Color>
+    <List_File>ListView1_ListFile.txt</List_File>
+    <List_File_Data>1^AIRHMI^HMI^5
+2^AIRHMI^HMI^5
+3^AIRHMI^HMI^5
+4^AIRHMI^HMI^5
+</List_File_Data>
+    <Enable_Sort>1</Enable_Sort>
+    <Width>404</Width>
+    <Height>240</Height>
+    <Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>usb</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen2</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton6</name>
+    <Left>301</Left>
+    <Top>200</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Delete</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16711936</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+ListViewDeleteX("ListView1" ,1 );
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton8</name>
+    <Left>300</Left>
+    <Top>0</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Next Page</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+ChangeScreenSet("Screen1");
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox4</name>
+    <Width>129</Width>
+    <Height>50</Height>
+    <Left>15</Left>
+    <Top>16</Top>
+    <Locked>False</Locked>
+    <Caption>Page 2</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen2~FSCREEN:
