@@ -4,10 +4,10 @@
 
 **NEEDLE_CIRCLE_COLOR** Gauge nesnesinin ortasındaki yuvarlağı değiştirmek için kullanılan özellik.
 
-'''
+```
 GaugeSet("Gauge1" ,"NEEDLE_COLOR" , "#ffFFCC");
 GaugeSet("Gauge1" ,"NEEDLE_CIRCLE_COLOR" , "#000088");
-'''
+```
 
 Bu dokümanda, statik ve dinamik olmak üzere iki farklı Gaugeun rengi özelliği üzerinde etkili olan faktörler incelenmiştir.
 Statik Gaugelar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Gaugelardır. Static(false) yani dinamik Gauge'lar ise sayfaya özgüdür.
