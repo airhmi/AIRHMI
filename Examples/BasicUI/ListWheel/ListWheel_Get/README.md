@@ -31,9 +31,9 @@ Bu bilgiler ışığında, **Value Get değişikliklerinin beklenen sonuçları 
 ![Açıklama Metni](2.png)
 
 ## Sonraki sayfaya geçiyoruz. ListWheel Value değerini alıyoruz.
+- **Statik olan ListWheel'in değerini alabiliyoruz.**  
+- **Dinamik olan ListWheel'in değerine erişilemiyor.**
 ![Açıklama Metni](3.png)
 
 ## Birinci sayfaya tekrar dönüyoruz. 
-- **Statik olan ListWheel'in değerini alabiliyoruz.**  
-- **Dinamik olan ListWheel'in değerine erişilemiyor.**
 ![Açıklama Metni](4.png)
