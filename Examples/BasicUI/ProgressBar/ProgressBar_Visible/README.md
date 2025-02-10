@@ -39,7 +39,11 @@ Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar ayn
 
 Bu bilgiler ışığında, **görünürlük değişikliklerinin beklenen sonuçları doğru şekilde ele alınmalıdır.** 🚀
 
+![Açıklama Metni](1.png)
+
 ![Açıklama Metni](2.png)
 
-![Açıklama Metni](1.png)
+![Açıklama Metni](3.png)
+
+![Açıklama Metni](4.png)
 
