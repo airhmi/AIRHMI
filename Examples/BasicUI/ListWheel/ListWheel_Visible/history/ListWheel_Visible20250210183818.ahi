@@ -5,7 +5,7 @@
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>ttl</UploadInterface>
+    <UploadInterface>usb</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>
@@ -311,7 +311,7 @@ ChangeScreenSet("Screen2");
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>ttl</UploadInterface>
+    <UploadInterface>usb</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>

@@ -5,7 +5,7 @@
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>ttl</UploadInterface>
+    <UploadInterface>usb</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>
@@ -70,7 +70,7 @@
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Visible On</Caption>
+    <Caption>Set</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -105,8 +105,7 @@
     </OnUp>
     <OnDown>#include "stk.h"
 
-ListWheelSet("ListWheel1" ,"Visible" , "True");
-ListWheelSet("ListWheel2" ,"Visible" , "True");
+ListWheelSet("ListWheel1" ,"Value" , "5");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -121,7 +120,7 @@ ListWheelSet("ListWheel2" ,"Visible" , "True");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Visisble Off</Caption>
+    <Caption>Set</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -156,8 +155,7 @@ ListWheelSet("ListWheel2" ,"Visible" , "True");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ListWheelSet("ListWheel1" ,"Visible" , "False");
-ListWheelSet("ListWheel2" ,"Visible" , "False");
+ListWheelSet("ListWheel2" ,"Value" , "6");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -237,8 +235,8 @@ ChangeScreenSet("Screen2");
   </Controls>
   <Controls ID="EListWhell">
     <name>ListWheel1</name>
-    <Left>145</Left>
-    <Top>209</Top>
+    <Left>139</Left>
+    <Top>203</Top>
     <Locked>False</Locked>
     <Visible>True</Visible>
     <Active>True</Active>
@@ -247,11 +245,10 @@ ChangeScreenSet("Screen2");
     <selectedColor>-65536</selectedColor>
     <unselectedColor>-8355712</unselectedColor>
     <separatorColor>-8355712</separatorColor>
-    <backgroundColor>-2894893</backgroundColor>
+    <backgroundColor>-1</backgroundColor>
     <borderColor>-16777216</borderColor>
     <List_File>ListWheel1_ListFile.txt</List_File>
-    <List_File_Data>0
-1
+    <List_File_Data>1
 2
 3
 4
@@ -261,18 +258,18 @@ ChangeScreenSet("Screen2");
 8
 9
 </List_File_Data>
-    <Width>116</Width>
-    <Height>134</Height>
+    <Width>129</Width>
+    <Height>147</Height>
     <FontName>Roboto</FontName>
-    <FontSize>28</FontSize>
+    <FontSize>26</FontSize>
     <borderPenSize>12</borderPenSize>
     <lineCount>3</lineCount>
     <Order />
   </Controls>
   <Controls ID="EListWhell">
     <name>ListWheel2</name>
-    <Left>541</Left>
-    <Top>209</Top>
+    <Left>539</Left>
+    <Top>203</Top>
     <Locked>False</Locked>
     <Visible>True</Visible>
     <Active>True</Active>
@@ -281,11 +278,10 @@ ChangeScreenSet("Screen2");
     <selectedColor>-65536</selectedColor>
     <unselectedColor>-8355712</unselectedColor>
     <separatorColor>-8355712</separatorColor>
-    <backgroundColor>-6632142</backgroundColor>
+    <backgroundColor>-1</backgroundColor>
     <borderColor>-16777216</borderColor>
     <List_File>ListWheel2_ListFile.txt</List_File>
-    <List_File_Data>0
-1
+    <List_File_Data>1
 2
 3
 4
@@ -295,10 +291,10 @@ ChangeScreenSet("Screen2");
 8
 9
 </List_File_Data>
-    <Width>116</Width>
-    <Height>134</Height>
+    <Width>129</Width>
+    <Height>147</Height>
     <FontName>Roboto</FontName>
-    <FontSize>28</FontSize>
+    <FontSize>26</FontSize>
     <borderPenSize>12</borderPenSize>
     <lineCount>3</lineCount>
     <Order />
@@ -311,7 +307,7 @@ ChangeScreenSet("Screen2");
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>ttl</UploadInterface>
+    <UploadInterface>usb</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>
@@ -336,7 +332,7 @@ ChangeScreenSet("Screen2");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Visible On</Caption>
+    <Caption>Set</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -371,8 +367,7 @@ ChangeScreenSet("Screen2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ListWheelSet("ListWheel1" ,"Visible" , "True");
-ListWheelSet("ListWheel2" ,"Visible" , "True");
+ListWheelSet("ListWheel1" ,"Value" , "7");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -387,7 +382,7 @@ ListWheelSet("ListWheel2" ,"Visible" , "True");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Visisble Off</Caption>
+    <Caption>Set</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -422,8 +417,7 @@ ListWheelSet("ListWheel2" ,"Visible" , "True");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ListWheelSet("ListWheel1" ,"Visible" , "False");
-ListWheelSet("ListWheel2" ,"Visible" , "False");
+ListWheelSet("ListWheel2" ,"Value" , "8");
 </OnDown>
     <OnClick>
     </OnClick>
