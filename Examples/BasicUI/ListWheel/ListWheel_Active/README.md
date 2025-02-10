@@ -1,6 +1,6 @@
 # ListWheel Active Özelliği
 
-Active özelliği ListWheel basma işlemi için açma ve kapatma özelliğine sahip olması anlamına gelir.
+Active özelliği ListWheel değerini değiştirme işlemi özelliğine sahip olması anlamına gelir.
 Bu dokümanda, statik ve dinamik olmak üzere iki farklı ListWheel Active özelliği üzerinde etkili olan faktörler incelenmiştir.
 Statik ListWheellar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen ListWheellardır. Static(false) yani dinamik ListWheellar ise sayfaya özgüdür.
 Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman ListWheel ilk hali ile baştan meydana getirilir. 
