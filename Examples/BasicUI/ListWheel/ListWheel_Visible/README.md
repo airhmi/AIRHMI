@@ -1,12 +1,12 @@
 # ListWheel Görünürlük Özelliği
 
 Bu dokümanda, statik ve dinamik olmak üzere iki farklı ListWheel görünürlük durumları üzerinde etkili olan faktörler incelenmiştir.
-Statik ListWheellar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen ListWheellardır. Static(false) yani dinamik ListWheellar ise sayfaya özgüdür.
+Statik ListWheel'ler her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen ListWheellardır. Static(false) yani dinamik ListWheellar ise sayfaya özgüdür.
 Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman ListWheel ilk hali ile baştan meydana getirilir. 
 
 ## 📌 1. ListWheelların Tanımı
-- **🟢 Statik ListWheel**: Static özelliği true olan ListWheeldur. Görünürlük (`Visible`) özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
-- **🔵 Dinamik ListWheel**: Statik özelliği false olan ListWheeldur. Görünürlük (`Visible`) özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
+- **🟢 Statik ListWheel**: Static özelliği true olan ListWheel'dir. Görünürlük (`Visible`) özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
+- **🔵 Dinamik ListWheel**: Statik özelliği false olan ListWheel'dir. Görünürlük (`Visible`) özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
 ## 🔍 2. ListWheel Görünürlük Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
