@@ -1,6 +1,5 @@
 # ListViewGet ROWCOUNT ve COLCOUNT Özelliği
 
-ListView airhmi de veri tabanı olarak kullanılır. 
 ListView de listedeki kolon sayısı ve row sayısınını alibiliyoruz. 
 
 ```
