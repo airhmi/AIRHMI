@@ -9,7 +9,7 @@ olmasını sağlarken, farklı ekranlar arasında gereksiz işlem yükünü önl
 ## Private Timer, bu sayfada aktif olarak çalışarak hem Label'i güncelliyor hem de seri porta veri gönderiyor.
 ![Açıklama Metni](1.png)
 
-## Private sayfa 2 de çalışmıyor.
+## Private Timer sayfa 2 de çalışmıyor.
 ![Açıklama Metni](2.png)
 
 
