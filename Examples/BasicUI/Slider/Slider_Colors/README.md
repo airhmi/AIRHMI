@@ -1,46 +1,45 @@
-# ProgressBar Color Özelliği
+# Slider Color Özelliği
 
 
 ```
-ProgressBarSet("ProgressBar1" ,"COLOR" , "#DC143C"); 
-// ProgressBar'ın dolum rengini (ön plan rengini) koyu kırmızı olarak ayarlar (#DC143C - Crimson).
+// Slider'ın ana rengini belirler. Bu renk, genellikle kaydırıcının aktif alanını temsil eder.  
+// "#FF4500" kodu, "Orange Red" yani turuncu-kırmızı bir tonu ifade eder.  
+SliderSet("Slider1" ,"COLOR" , "#FF4500"); // Orange Red  
 
-ProgressBarSet("ProgressBar1" ,"BACKGROUND_COLOR" , "#353535"); 
-// ProgressBar'ın arka plan rengini koyu gri olarak ayarlar (#353535).
+// Kaydırıcının arka plan rengini belirler. Bu renk, genellikle kaydırıcının pasif alanını ve arka planını kapsar.  
+// "#282828" kodu, "Charcoal Gray" yani kömür grisi tonunda koyu bir renktir.  
+SliderSet("Slider1" ,"BACKGROUND_COLOR" , "#282828"); // Charcoal Gray  
 
-ProgressBarSet("ProgressBar1" ,"BORDER_COLOR" , "#D4AF37"); 
-// ProgressBar'ın çerçeve (kenarlık) rengini altın sarısı olarak ayarlar (#D4AF37 - Gold).
-
-ProgressBarSet("ProgressBar1" ,"FONT_COLOR" , "#FFFFF0"); 
-// ProgressBar üzerindeki yazının rengini açık beyaz (kırık beyaz) olarak ayarlar (#FFFFF0 - Ivory).
-
+// Kaydırıcının başlığının (thumb) rengini belirler. Bu renk, kaydırma düğmesi veya sürgü kısmı için kullanılır.  
+// "#00CED1" kodu, "Dark Turquoise" yani koyu turkuaz rengidir, mavi-yeşil bir ton içerir.  
+SliderSet("Slider1" ,"THUMB_COLOR" , "#00CED1"); // Dark Turquoise  
 
 ```
 
-Bu dokümanda, statik ve dinamik olmak üzere iki farklı ProgressBarun rengi özelliği üzerinde etkili olan faktörler incelenmiştir.
-Statik ProgressBarlar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen ProgressBarlardır. Static(false) yani dinamik ProgressBar'lar ise sayfaya özgüdür.
-Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman ProgressBar ilk hali ile baştan meydana getirilir. 
+Bu dokümanda, statik ve dinamik olmak üzere iki farklı Sliderun rengi özelliği üzerinde etkili olan faktörler incelenmiştir.
+Statik Sliderlar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Sliderlardır. Static(false) yani dinamik Slider'lar ise sayfaya özgüdür.
+Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Slider ilk hali ile baştan meydana getirilir. 
 
-## 📌 1. ProgressBar Tanımı
-- **🟢 Statik ProgressBar**: Static özelliği true olan ProgressBar'dur. Color özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
-- **🔵 Dinamik ProgressBar**: Statik özelliği false olan ProgressBar'dur. Color  özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
+## 📌 1. Slider Tanımı
+- **🟢 Statik Slider**: Static özelliği true olan Slider'dur. Color özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
+- **🔵 Dinamik Slider**: Statik özelliği false olan Slider'dur. Color  özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
-## 🔍 2. ProgressBar NEEDLE_COLOR ve NEEDLE_CIRCLE_COLOR Değiştirme Durumları
+## 🔍 2. Slider NEEDLE_COLOR ve NEEDLE_CIRCLE_COLOR Değiştirme Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
-- Kullanıcı **statik ProgressBarun Color değerini** değiştirebilir.
-- Kullanıcı **dinamik ProgressBarun Color değerini** değiştirebilir.
+- Kullanıcı **statik Sliderun Color değerini** değiştirebilir.
+- Kullanıcı **dinamik Sliderun Color değerini** değiştirebilir.
 
 
 ### 🔄 Farklı Sayfadan Olası Senaryolar
-- Kullanıcı **statik ProgressBarun Color değerini** değiştirebilir.
-- Kullanıcı **dinamik ProgressBarun Color değerini değiştiremez.**
-- **Statik ProgressBar**, farklı sayfadan Color değerini değiştirirsek, aynı sayfaya dönüldüğünde **yeni değiştirilen Color değeri gelir.**
-- **Dinamik ProgressBarun Color değerini değiştirsek bile etki etmez.**
+- Kullanıcı **statik Sliderun Color değerini** değiştirebilir.
+- Kullanıcı **dinamik Sliderun Color değerini değiştiremez.**
+- **Statik Slider**, farklı sayfadan Color değerini değiştirirsek, aynı sayfaya dönüldüğünde **yeni değiştirilen Color değeri gelir.**
+- **Dinamik Sliderun Color değerini değiştirsek bile etki etmez.**
 
 ## 🎯 4. Sonuç
-✔️ Aynı sayfada **her iki ProgressBarun Color değerini değiştirilebilir**.  
-✔️ **Statik ProgressBarun Color değerini** diğer sayfalardan değiştirilebilir.  
-✔️ **Dinamik ProgressBarun Color değerini** yalnızca oluşturulduğu sayfada değiştirilebilir.  
+✔️ Aynı sayfada **her iki Sliderun Color değerini değiştirilebilir**.  
+✔️ **Statik Sliderun Color değerini** diğer sayfalardan değiştirilebilir.  
+✔️ **Dinamik Sliderun Color değerini** yalnızca oluşturulduğu sayfada değiştirilebilir.  
 
 ![Açıklama Metni](1.png)
 

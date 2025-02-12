@@ -5,7 +5,7 @@
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>ttl</UploadInterface>
+    <UploadInterface>usb</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>
@@ -14,7 +14,7 @@
     </OnStart>
     <Functions>
     </Functions>
-    <BgColor>-16777216</BgColor>
+    <BgColor>-6632142</BgColor>
     <Name>Screen1</Name>
     <Rotate>Horizontal</Rotate>
     <Background_Image>
@@ -70,7 +70,7 @@
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Visible On</Caption>
+    <Caption>Set</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -105,8 +105,9 @@
     </OnUp>
     <OnDown>#include "stk.h"
 
-SliderSet("Slider1" ,"Visible" , "True");
-SliderSet("Slider2" ,"Visible" , "True");
+SliderSet("Slider1" ,"COLOR" , "#FF4500"); // Orange Red  
+SliderSet("Slider1" ,"BACKGROUND_COLOR" , "#282828"); // Charcoal Gray  
+SliderSet("Slider1" ,"THUMB_COLOR" , "#00CED1"); // Dark Turquoise  
 </OnDown>
     <OnClick>
     </OnClick>
@@ -121,7 +122,7 @@ SliderSet("Slider2" ,"Visible" , "True");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>True</Locked>
-    <Caption>Visisble Off</Caption>
+    <Caption>Set</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -156,8 +157,10 @@ SliderSet("Slider2" ,"Visible" , "True");
     </OnUp>
     <OnDown>#include "stk.h"
 
-SliderSet("Slider1" ,"Visible" , "False");
-SliderSet("Slider2" ,"Visible" , "False");
+SliderSet("Slider2" ,"COLOR" , "#E30B5D");
+SliderSet("Slider2" ,"BACKGROUND_COLOR" , "#E6E6FA");
+SliderSet("Slider2" ,"THUMB_COLOR" , "#FFB6C1");
+
 </OnDown>
     <OnClick>
     </OnClick>
@@ -238,10 +241,10 @@ ChangeScreenSet("Screen2");
   <Controls ID="EveSlider">
     <name>Slider1</name>
     <direction>horizontal</direction>
-    <Left>33</Left>
-    <Top>225</Top>
-    <Width>317</Width>
-    <Height>64</Height>
+    <Left>21</Left>
+    <Top>232</Top>
+    <Width>349</Width>
+    <Height>59</Height>
     <Locked>False</Locked>
     <Value>25</Value>
     <Visible>True</Visible>
@@ -249,7 +252,7 @@ ChangeScreenSet("Screen2");
     <Active>True</Active>
     <Color>-1</Color>
     <BackgroundColor>-16728065</BackgroundColor>
-    <ThumbColor>-47872</ThumbColor>
+    <ThumbColor>-7650029</ThumbColor>
     <Range>100</Range>
     <Tag>255</Tag>
     <Order />
@@ -265,10 +268,10 @@ ChangeScreenSet("Screen2");
   <Controls ID="EveSlider">
     <name>Slider2</name>
     <direction>horizontal</direction>
-    <Left>401</Left>
-    <Top>225</Top>
-    <Width>317</Width>
-    <Height>64</Height>
+    <Left>419</Left>
+    <Top>231</Top>
+    <Width>349</Width>
+    <Height>59</Height>
     <Locked>False</Locked>
     <Value>25</Value>
     <Visible>True</Visible>
@@ -276,7 +279,7 @@ ChangeScreenSet("Screen2");
     <Active>True</Active>
     <Color>-1</Color>
     <BackgroundColor>-16728065</BackgroundColor>
-    <ThumbColor>-29696</ThumbColor>
+    <ThumbColor>-7650029</ThumbColor>
     <Range>100</Range>
     <Tag>255</Tag>
     <Order />
@@ -297,7 +300,7 @@ ChangeScreenSet("Screen2");
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>ttl</UploadInterface>
+    <UploadInterface>usb</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>
@@ -316,13 +319,13 @@ ChangeScreenSet("Screen2");
   </Controls>
   <Controls ID="EButton">
     <name>EButton6</name>
-    <Left>100</Left>
+    <Left>101</Left>
     <Top>200</Top>
     <Width>200</Width>
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Visible On</Caption>
+    <Caption>Set</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -357,8 +360,9 @@ ChangeScreenSet("Screen2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-SliderSet("Slider1" ,"Visible" , "True");
-SliderSet("Slider2" ,"Visible" , "True");
+SliderSet("Slider1" ,"COLOR" , "#32CD32"); // Lime Green  
+SliderSet("Slider1" ,"BACKGROUND_COLOR" , "#FFFFFF"); // Jet Black  
+SliderSet("Slider1" ,"THUMB_COLOR" , "#FF8C00"); // Dark Orange  
 </OnDown>
     <OnClick>
     </OnClick>
@@ -373,7 +377,7 @@ SliderSet("Slider2" ,"Visible" , "True");
     <Height>100</Height>
     <TextAligment>Center</TextAligment>
     <Locked>False</Locked>
-    <Caption>Visisble Off</Caption>
+    <Caption>Set</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
     <SoundVolume>40</SoundVolume>
@@ -408,8 +412,10 @@ SliderSet("Slider2" ,"Visible" , "True");
     </OnUp>
     <OnDown>#include "stk.h"
 
-SliderSet("Slider1" ,"Visible" , "False");
-SliderSet("Slider2" ,"Visible" , "False");
+SliderSet("Slider2" ,"COLOR" , "#E30B5D");
+SliderSet("Slider2" ,"BACKGROUND_COLOR" , "#E6E6FA");
+SliderSet("Slider2" ,"THUMB_COLOR" , "#E6E6FA");
+
 </OnDown>
     <OnClick>
     </OnClick>
