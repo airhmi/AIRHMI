@@ -105,8 +105,8 @@
     </OnUp>
     <OnDown>#include "stk.h"
 
-SliderSet("Slider1" ,"Left" , "45");
-SliderSet("Slider1" ,"Top" , "300");
+SliderSet("Slider1" ,"Left" , "145");
+SliderSet("Slider1" ,"Top" , "280");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -156,8 +156,8 @@ SliderSet("Slider1" ,"Top" , "300");
     </OnUp>
     <OnDown>#include "stk.h"
 
-SliderSet("Slider2" ,"Left" , "425");
-SliderSet("Slider2" ,"Top" , "300");
+SliderSet("Slider2" ,"Left" , "245");
+SliderSet("Slider2" ,"Top" , "200");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -357,8 +357,8 @@ ChangeScreenSet("Screen2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-SliderSet("Slider1" ,"Left" , "10");
-SliderSet("Slider1" ,"Top" , "300");
+SliderSet("Slider1" ,"Left" , "145");
+SliderSet("Slider1" ,"Top" , "200");
 </OnDown>
     <OnClick>
     </OnClick>
@@ -408,7 +408,8 @@ SliderSet("Slider1" ,"Top" , "300");
     </OnUp>
     <OnDown>#include "stk.h"
 
-SliderSet("Slider2" ,"Value" , "30");
+SliderSet("Slider2" ,"Left" , "245");
+SliderSet("Slider2" ,"Top" , "250");
 </OnDown>
     <OnClick>
     </OnClick>
