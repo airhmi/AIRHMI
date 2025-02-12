@@ -6,9 +6,9 @@ Kullanıcı başka bir sayfaya geçtiğinde veya uygulama içinde farklı bir ek
 yerden devam eder veya belirlenen başlangıç koşullarına göre sıfırdan başlatılır. Bu özellik, her sayfanın bağımsız bir zamanlayıcıya sahip 
 olmasını sağlarken, farklı ekranlar arasında gereksiz işlem yükünü önleyerek sistem kaynaklarının daha verimli kullanılmasına olanak tanır.
 
-
+## Local Timer, bu sayfada aktif olarak çalışarak hem Label'i güncelliyor hem de seri porta veri gönderiyor.
 ![Açıklama Metni](1.png)
-
+## Local Timer sayfa 2 de çalışmıyor.
 ![Açıklama Metni](2.png)
 
 
