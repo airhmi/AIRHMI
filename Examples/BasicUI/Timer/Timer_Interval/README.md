@@ -29,13 +29,6 @@ TimerSet("ETimer1", "Interval", "500");
 
 Bu sayede **TimerSet()** fonksiyonu, sadece timer'ları başlatıp durdurmakla kalmaz, aynı zamanda **çalışma sürelerini esnek bir şekilde ayarlamaya olanak tanır**, böylece uygulamanın ihtiyaçlarına uygun olarak zamanlama yönetimi yapılabilir.
 
-## Kullanım Senaryoları
-
-- **Animasyon veya belirli bir işlemi periyodik olarak çalıştırmak için timer'ı başlatmak**
-- **Kullanıcı belirli bir işlem gerçekleştirdiğinde (örneğin, butona bastığında) timer'ı devre dışı bırakmak**
-- **Belirli bir süre boyunca sürekli veri gönderen bir işlemde, sürenin dolmasıyla timer'ı durdurmak**
-- **Sayfa değişimlerine bağlı olarak timer'ı kontrol etmek**
-
 Bu sayede **TimerSet() fonksiyonu**, HMI ekranında **zamanlama işlemlerinin yönetilmesini sağlayarak** kullanıcıya dinamik bir kontrol imkanı sunar.
 
 ![Açıklama Metni](1.png)
