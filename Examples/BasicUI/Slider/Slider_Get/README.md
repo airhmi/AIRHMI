@@ -34,8 +34,10 @@ Bu bilgiler ışığında, **Value Get değişikliklerinin beklenen sonuçları 
 ## Her iki Slider'in de Value değeri alınıyor.
 ![Açıklama Metni](2.png)
 
-## Sonraki sayfaya geçiyoruz. Slider Value değerini alıyoruz.
+## Sonraki sayfaya geçiyoruz.
+![Açıklama Metni](3.png)
+## Slider Value değerini alıyoruz.
 - **Statik olan Slider'in değeri alınmıştır.**  
 - **Dinamik olan Slider ise değeri alınamamıştır.**
-![Açıklama Metni](3.png)
+![Açıklama Metni](4.png)
 
