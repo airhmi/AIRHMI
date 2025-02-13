@@ -1,12 +1,12 @@
-# HMI Sisteminde Yapı (Struct) Kullanımı ve Veri Saklama
+# AIRHMI Sisteminde Yapı (Struct) Kullanımı ve Veri Saklama
 
-Bu belge, **HMI (Human-Machine Interface)** sisteminde yapı (struct) tanımlamak, bu yapıya veri atamak, saklamak ve daha sonra geri çağırarak kullanmak için kullanılan fonksiyonları açıklamaktadır.
+Bu belge, **AIRHMI (Human-Machine Interface)** sisteminde yapı (struct) tanımlamak, bu yapıya veri atamak, saklamak ve daha sonra geri çağırarak kullanmak için kullanılan fonksiyonları açıklamaktadır.
 
 ## 1. Yapı (Struct) Tanımlama ve Saklama
 
 ### **1.1 Yapı Tanımlama**
 
-HMI sisteminde **verileri grup halinde saklamak** için `struct` kullanılır.
+AIRHMI sisteminde **verileri grup halinde saklamak** için `struct` kullanılır.
 
 ```c
 #include "stk.h"
@@ -84,7 +84,7 @@ printf("data3:%s \n", data.data3);
 ---
 
 
-Bu yapı sayesinde, **HMI sistemlerinde kompleks veriler yönetilebilir, kaydedilebilir ve tekrar çağrılabilir.** 🚀
+Bu yapı sayesinde, **AIRHMI sistemlerinde kompleks veriler yönetilebilir, kaydedilebilir ve tekrar çağrılabilir.** 🚀
 
 ![Açıklama Metni](1.png)
 
