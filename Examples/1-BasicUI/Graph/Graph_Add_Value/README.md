@@ -5,7 +5,13 @@ Statik Graph, her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Gr
 Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Graph ilk hali ile baştan oluşturulur. 
 
 ```
-GraphSet("Graph1" ,"Value" , "45");
+GRAPH_AddValue("Graph1" , 0, 0);
+
+GRAPH_AddValue("Graph1" , 1, 20);
+
+GRAPH_AddValue("Graph1" , 2, -40);
+
+GRAPH_AddValue("Graph1" , 3, -80);
 ```
 
 ## 📌 1. Graph Tanımı
