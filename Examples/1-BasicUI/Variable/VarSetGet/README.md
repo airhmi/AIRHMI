@@ -35,9 +35,9 @@ VarSetf("VPFloat", k);
 ```
 - `"VPFloat"` adında bir **double/float** değişken oluşturur ve `8.5` değerini saklar.
 
-## 2. Değişkenleri Alma ve HMI Label Bileşenlerine Atama
+## 2. Değişkenleri Alma ve AIRHMI Label Bileşenlerine Atama
 
-HMI sisteminde saklanan değişkenler `VarGet` fonksiyonu ile alınarak, etiketlere (`LabelSeti`, `LabelSets`, `LabelSetf`) aktarılabilir.
+AIRHMI sisteminde saklanan değişkenler `VarGet` fonksiyonu ile alınarak, etiketlere (`LabelSeti`, `LabelSets`, `LabelSetf`) aktarılabilir.
 
 #### a) Tam Sayı (Integer) Değerini Alma ve Label'a Atama
 ```c
@@ -79,7 +79,7 @@ LabelSetf("ELabelBox7", k);
 - `LabelSetf("ELabelBox7", k);` ile bu değeri `ELabelBox7` etiketine yazdırır.
 
 ## 3. Genel Özet
-Bu kod sayesinde **HMI ekranında farklı veri tiplerinde değişkenler** tanımlanabilir, saklanabilir ve HMI'nin farklı bileşenlerinde kullanılmak üzere çağrılabilir.
+Bu kod sayesinde **AIRHMI ekranında farklı veri tiplerinde değişkenler** tanımlanabilir, saklanabilir ve HMI'nin farklı bileşenlerinde kullanılmak üzere çağrılabilir.
 
 | Değişken | Saklanan Değer | Label Bileşeni |
 |----------|---------------|---------------|
