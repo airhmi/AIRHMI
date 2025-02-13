@@ -1,0 +1,537 @@
+﻿800:480;2
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>usb</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox1</name>
+    <Width>100</Width>
+    <Height>50</Height>
+    <Left>110</Left>
+    <Top>97</Top>
+    <Locked>False</Locked>
+    <Caption>Static</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox2</name>
+    <Width>147</Width>
+    <Height>50</Height>
+    <Left>534</Left>
+    <Top>97</Top>
+    <Locked>False</Locked>
+    <Caption>Dynamic</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton3</name>
+    <Left>159</Left>
+    <Top>357</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>True</Locked>
+    <Caption>Add Value</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16711936</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "math.h"
+
+
+GRAPH_AddValue("Graph1" , 0, 0);
+
+GRAPH_AddValue("Graph1" , 1, 20);
+
+GRAPH_AddValue("Graph1" , 2, -40);
+
+GRAPH_AddValue("Graph1" , 3, -80);
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton4</name>
+    <Left>437</Left>
+    <Top>357</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>True</Locked>
+    <Caption>Add Value</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "math.h"
+
+
+GRAPH_AddValue("Graph2" , 0, 0);
+
+GRAPH_AddValue("Graph2" , 1, 20);
+
+GRAPH_AddValue("Graph2" , 2, -40);
+
+GRAPH_AddValue("Graph2" , 3, -80);
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton5</name>
+    <Left>300</Left>
+    <Top>0</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>True</Locked>
+    <Caption>Next Page</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+ChangeScreenSet("Screen2");
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox3</name>
+    <Width>129</Width>
+    <Height>50</Height>
+    <Left>14</Left>
+    <Top>14</Top>
+    <Locked>False</Locked>
+    <Caption>Page 1</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="EGraph">
+    <name>Graph1</name>
+    <Static>True</Static>
+    <Left>10</Left>
+    <Top>153</Top>
+    <Width>315</Width>
+    <Height>182</Height>
+    <Locked>False</Locked>
+    <Visible>True</Visible>
+    <Grid_Vis>True</Grid_Vis>
+    <Grid_X_Size>10</Grid_X_Size>
+    <Grid_Y_Size>10</Grid_Y_Size>
+    <Scale_Multiple>1</Scale_Multiple>
+    <Scale_Tick_Distance>20</Scale_Tick_Distance>
+    <Scale_Offset>120</Scale_Offset>
+    <Y_Offset>0</Y_Offset>
+    <Line_Count>4</Line_Count>
+    <Line1_Color>-16776961</Line1_Color>
+    <Line2_Color>-256</Line2_Color>
+    <Line3_Color>-16744448</Line3_Color>
+    <Line4_Color>-16181</Line4_Color>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EGraph">
+    <name>Graph2</name>
+    <Static>False</Static>
+    <Left>439</Left>
+    <Top>153</Top>
+    <Width>315</Width>
+    <Height>182</Height>
+    <Locked>False</Locked>
+    <Visible>True</Visible>
+    <Grid_Vis>True</Grid_Vis>
+    <Grid_X_Size>10</Grid_X_Size>
+    <Grid_Y_Size>10</Grid_Y_Size>
+    <Scale_Multiple>1</Scale_Multiple>
+    <Scale_Tick_Distance>20</Scale_Tick_Distance>
+    <Scale_Offset>120</Scale_Offset>
+    <Y_Offset>0</Y_Offset>
+    <Line_Count>4</Line_Count>
+    <Line1_Color>-16776961</Line1_Color>
+    <Line2_Color>-256</Line2_Color>
+    <Line3_Color>-16744448</Line3_Color>
+    <Line4_Color>-16181</Line4_Color>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>usb</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen2</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton6</name>
+    <Left>100</Left>
+    <Top>200</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Add Value</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16711936</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "math.h"
+
+
+GRAPH_AddValue("Graph1" , 0, 10);
+
+GRAPH_AddValue("Graph1" , 1, 30);
+
+GRAPH_AddValue("Graph1" , 2, -50);
+
+GRAPH_AddValue("Graph1" , 3, -90);
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton7</name>
+    <Left>500</Left>
+    <Top>199</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Add Value</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "math.h"
+
+
+GRAPH_AddValue("Graph2" , 0, 10);
+
+GRAPH_AddValue("Graph2" , 1, 30);
+
+GRAPH_AddValue("Graph2" , 2, -50);
+
+GRAPH_AddValue("Graph2" , 3, -90);
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton8</name>
+    <Left>300</Left>
+    <Top>0</Top>
+    <Width>200</Width>
+    <Height>100</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Next Page</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>True</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+ChangeScreenSet("Screen1");
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox4</name>
+    <Width>129</Width>
+    <Height>50</Height>
+    <Left>15</Left>
+    <Top>16</Top>
+    <Locked>False</Locked>
+    <Caption>Page 2</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen2~FSCREEN:

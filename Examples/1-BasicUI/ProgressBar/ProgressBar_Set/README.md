@@ -1,43 +1,43 @@
-# ProgressBar Value Set Özelliği
+# GRAPH_AddValue Özelliği
 
-Bu dokümanda, statik ve dinamik olmak üzere iki farklı ProgressBar Value Set durumları üzerinde etkili olan faktörler incelenmiştir.
-Statik ProgressBar, her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen ProgressBar'dır. **Static(false)** yani dinamik ProgressBar'lar ise sayfaya özgüdür.
-Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman ProgressBar ilk hali ile baştan oluşturulur. 
+Bu dokümanda, statik ve dinamik olmak üzere iki farklı GRAPH_AddValue durumları üzerinde etkili olan faktörler incelenmiştir.
+Statik Graph, her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Graph'dır. **Static(false)** yani dinamik Graph'lar ise sayfaya özgüdür.
+Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Graph ilk hali ile baştan oluşturulur. 
 
 ```
-ProgressBarSet("ProgressBar1" ,"Value" , "45");
+GraphSet("Graph1" ,"Value" , "45");
 ```
 
-## 📌 1. ProgressBar Tanımı
-- **🟢 Statik ProgressBar**: Static özelliği **true** olan ProgressBar'dir. Value Set özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
-- **🔵 Dinamik ProgressBar**: Static özelliği **false** olan ProgressBar'dir. Value Set özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
+## 📌 1. Graph Tanımı
+- **🟢 Statik Graph**: Static özelliği **true** olan Graph'dir. Value Set özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
+- **🔵 Dinamik Graph**: Static özelliği **false** olan Graph'dir. Value Set özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
 
-## 🔍 2. ProgressBar Value Set Durumları
+## 🔍 2. GRAPH_AddValue Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
-- Kullanıcı **statik ProgressBar Value Set** yapabilir.
-- Kullanıcı **dinamik ProgressBar Value Set** yapabilir.
+- Kullanıcı **statik GRAPH_AddValue** yapabilir.
+- Kullanıcı **dinamik GRAPH_AddValue** yapabilir.
 
 ### 🔄 Farklı Sayfadan Olası Senaryolar
-- Kullanıcı **statik ProgressBar Value Set** yapabilir.
-- Kullanıcı **dinamik ProgressBar Value Set** ile değiştiremez.
+- Kullanıcı **statik GRAPH_AddValue** yapabilir.
+- Kullanıcı **dinamik GRAPH_AddValue** ile değiştiremez.
 
 ## 🎯 3. Sonuç
-✔️ Aynı sayfada **her iki ProgressBar Value Set durumu değiştirilebilir**.  
-✔️ **Statik ProgressBar Value Set** diğer sayfalardan değiştirilebilir.  
-✔️ **Dinamik ProgressBar Value Set** yalnızca oluşturulduğu sayfada değiştirilebilir.  
+✔️ Aynı sayfada **her iki GRAPH_AddValue durumu değiştirilebilir**.  
+✔️ **Statik GRAPH_AddValue** diğer sayfalardan değiştirilebilir.  
+✔️ **Dinamik GRAPH_AddValue** yalnızca oluşturulduğu sayfada değiştirilebilir.  
 
 Bu bilgiler ışığında, **Value Set değişikliklerinin beklenen sonuçları doğru şekilde ele alınmalıdır.** 🚀
 
 ## Program İlk Açılış Görüntüsü
 ![Açıklama Metni](1.png)
 
-## Her iki ProgressBar'in de Value değeri değiştiriliyor.
+## Her iki Graph'in de Value değeri değiştiriliyor.
 ![Açıklama Metni](2.png)
 
-## Sonraki sayfaya geçiyoruz. ProgressBar Value değerini değiştiriyoruz.
+## Sonraki sayfaya geçiyoruz. Graph Value değerini değiştiriyoruz.
 ![Açıklama Metni](3.png)
 
 ## Birinci sayfaya tekrar dönüyoruz. 
-- **Statik olan ProgressBar'in değeri değişmiştir.**  
-- **Dinamik olan ProgressBar ise ilk değerini alır.**
+- **Statik olan Graph'in değeri değişmiştir.**  
+- **Dinamik olan Graph ise ilk değerini alır.**
 ![Açıklama Metni](4.png)
