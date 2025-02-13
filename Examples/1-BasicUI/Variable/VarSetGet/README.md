@@ -1,12 +1,12 @@
-# HMI Ekranında Değişken Tanımlama ve Veri Saklama
+# AIRHMI Ekranında Değişken Tanımlama ve Veri Saklama
 
-Bu belge, **HMI (Human-Machine Interface)** ekranında değişken tanımlamak, bu değişkenlere farklı veri tiplerinde değerler atamak ve bu değerleri HMI etiketlerine (Label) yansıtmak için kullanılan yapıyı açıklamaktadır.
+Bu belge, **AIRHMI (Human-Machine Interface)** ekranında değişken tanımlamak, bu değişkenlere farklı veri tiplerinde değerler atamak ve bu değerleri AIRHMI etiketlerine (Label) yansıtmak için kullanılan yapıyı açıklamaktadır.
 
 ## Kodun İşlevi
 
 ### 1. Değişken Tanımlama ve Saklama
 
-HMI sisteminde değişkenler `VarSeti`, `VarSet` ve `VarSetf` fonksiyonları kullanılarak tanımlanabilir ve saklanabilir.
+AIRHMI sisteminde değişkenler `VarSeti`, `VarSet` ve `VarSetf` fonksiyonları kullanılarak tanımlanabilir ve saklanabilir.
 
 #### a) Tam Sayı (Integer) Değişken Tanımlama
 ```c
