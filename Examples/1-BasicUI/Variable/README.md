@@ -1,4 +1,4 @@
-# HMI Değişken Yönetimi: VarSet, VarGet ve VariableSave Fonksiyonları
+# AIRHMI Değişken Yönetimi: VarSet, VarGet ve VariableSave Fonksiyonları
 
 ## 1. `VarSet` Fonksiyonları (Veri Saklama - RAM)
 - **Amaç:** Değişkenlere değer atamak ve RAM üzerinde saklamak.
@@ -29,4 +29,4 @@
 | `VarGet` | RAM'deki değişkeni okumak | RAM | ❌ Kaybolur |
 | `VariableSave` | Değişkeni kalıcı hafızaya kaydetmek | EEPROM/Flash/NVRAM | ✅ Korunur |
 
-Bu yapı, **HMI sistemlerinde verilerin saklanmasını ve korunmasını sağlar.** 🚀
+Bu yapı, **AIRHMI sistemlerinde verilerin saklanmasını ve korunmasını sağlar.** 🚀
