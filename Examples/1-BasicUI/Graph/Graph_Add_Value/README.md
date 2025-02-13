@@ -1,48 +1,43 @@
-# Graph Görünürlük Özelliği
+# GRAPH_AddValue Özelliği
 
-Bu dokümanda, statik ve dinamik olmak üzere iki farklı Graph görünürlük durumları üzerinde etkili olan faktörler incelenmiştir.
-Statik Graphlar her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Graphlardır. Static(false) yani dinamik Graphlar ise sayfaya özgüdür.
-Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Graph ilk hali ile baştan meydana getirilir. 
+Bu dokümanda, statik ve dinamik olmak üzere iki farklı GRAPH_AddValue durumları üzerinde etkili olan faktörler incelenmiştir.
+Statik Graph, her sayfadan tüm özelliklerine ulaşılıp değiştirilebilen Graph'dır. **Static(false)** yani dinamik Graph'lar ise sayfaya özgüdür.
+Sayfa değiştiği zaman hiçbir özelliği tutulmaz. Sayfa değişip tekrar aynı sayfaya gidildiği zaman Graph ilk hali ile baştan oluşturulur. 
 
-## 📌 1. Graphların Tanımı
-- **🟢 Statik Graph**: Static özelliği true olan Graphdur. Görünürlük (`Visible`) özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
-- **🔵 Dinamik Graph**: Statik özelliği false olan Graphdur. Görünürlük (`Visible`) özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
+```
+GraphSet("Graph1" ,"Value" , "45");
+```
 
-## 🔍 2. Graph Görünürlük Durumları
+## 📌 1. Graph Tanımı
+- **🟢 Statik Graph**: Static özelliği **true** olan Graph'dir. Value Set özelliği **hem aynı sayfadan hem de diğer sayfalardan** değiştirilebilir.
+- **🔵 Dinamik Graph**: Static özelliği **false** olan Graph'dir. Value Set özelliği **yalnızca aynı sayfada** değiştirilebilir, diğer sayfalardan değiştirilemez.
+
+## 🔍 2. GRAPH_AddValue Durumları
 ### 🏠 Aynı Sayfada Olası Senaryolar
-- Kullanıcı **statik Graph görünürlüğünü** `true` veya `false` yapabilir.
-- Kullanıcı **dinamik Graph görünürlüğünü** `true` veya `false` yapabilir.
-- **Her iki Graph da görünür olabilir.**
-- **Her iki Graph da gizlenebilir.**
+- Kullanıcı **statik GRAPH_AddValue** yapabilir.
+- Kullanıcı **dinamik GRAPH_AddValue** yapabilir.
 
 ### 🔄 Farklı Sayfadan Olası Senaryolar
-- Kullanıcı **statik Graph görünürlüğünü** `true` veya `false` yapabilir.
-- Kullanıcı **dinamik Graph görünürlüğünü değiştiremez.**
-- **Statik Graph**, farklı sayfadan gizlenirse, aynı sayfaya dönüldüğünde **görünmez** olur.
-- **Dinamik Graph görünürlük durumu korunur.**
+- Kullanıcı **statik GRAPH_AddValue** yapabilir.
+- Kullanıcı **dinamik GRAPH_AddValue** ile değiştiremez.
 
-## 📊 3. Olasılıklar Tablosu
+## 🎯 3. Sonuç
+✔️ Aynı sayfada **her iki GRAPH_AddValue durumu değiştirilebilir**.  
+✔️ **Statik GRAPH_AddValue** diğer sayfalardan değiştirilebilir.  
+✔️ **Dinamik GRAPH_AddValue** yalnızca oluşturulduğu sayfada değiştirilebilir.  
 
-| Senaryo | Statik Graph (Visible) | Dinamik Graph (Visible) | Açıklama |
-|---------|------------------------|------------------------|-----------|
-| ✅ 1 | `true`  | `true`  | Her iki Graph da görünür. |
-| ✅ 2 | `true`  | `false` | Statik Graph görünür, dinamik Graph gizli. |
-| ✅ 3 | `false` | `true`  | Statik Graph gizli, dinamik Graph görünür. |
-| ✅ 4 | `false` | `false` | Her iki Graph da gizli. |
-| ✅ 5 | `false` (Dışarıdan değiştirildi) | `true` | Farklı sayfada statik Graph kapatıldı, dinamik Graph etkilenmedi. |
-| ✅ 6 | `true`  | `true` (Dışarıdan değiştirilemedi) | Statik Graph değiştirildi, dinamik Graph aynı kaldı. |
+Bu bilgiler ışığında, **Value Set değişikliklerinin beklenen sonuçları doğru şekilde ele alınmalıdır.** 🚀
 
-## 🎯 4. Sonuç
-✔️ Aynı sayfada **her iki Graph görünürlük durumu değiştirilebilir**.  
-✔️ **Statik Graph görünürlüğü** diğer sayfalardan değiştirilebilir.  
-✔️ **Dinamik Graph görünürlüğü** yalnızca oluşturulduğu sayfada değiştirilebilir.  
-
-Bu bilgiler ışığında, **görünürlük değişikliklerinin beklenen sonuçları doğru şekilde ele alınmalıdır.** 🚀
-
+## Program İlk Açılış Görüntüsü
 ![Açıklama Metni](1.png)
 
+## Her iki Graph'in de Value değeri değiştiriliyor.
 ![Açıklama Metni](2.png)
 
+## Sonraki sayfaya geçiyoruz. Graph Value değerini değiştiriyoruz.
 ![Açıklama Metni](3.png)
 
+## Birinci sayfaya tekrar dönüyoruz. 
+- **Statik olan Graph'in değeri değişmiştir.**  
+- **Dinamik olan Graph ise ilk değerini alır.**
 ![Açıklama Metni](4.png)
