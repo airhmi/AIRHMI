@@ -1,4 +1,4 @@
-# AIR1024X600S101_A
+# AIR480X272S43_E
 
 AIRHMI'nin 4.3 inç rezistif dokunmatik gelişmiş HMI ekranı, endüstriyel kontrol ve otomasyon uygulamaları için tasarlanmış yüksek performanslı bir üründür. Bu ekran, 480x272 çözünürlüğe sahip TFT LCD paneli ve kapasitif dokunmatik özelliği ile kullanıcı dostu bir arayüz sunar.
 
