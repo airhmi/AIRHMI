@@ -1,0 +1,142 @@
+﻿800:480;2
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>ttl</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel1</name>
+    <Left>318</Left>
+    <Top>106</Top>
+    <Locked>False</Locked>
+    <Caption>Text</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Matura MT Script Capitals</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>28</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel2</name>
+    <Left>198</Left>
+    <Top>197</Top>
+    <Locked>False</Locked>
+    <Caption>Text</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Lucida Console</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>102</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel3</name>
+    <Left>161</Left>
+    <Top>54</Top>
+    <Locked>False</Locked>
+    <Caption>Text</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>22</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel4</name>
+    <Left>508</Left>
+    <Top>366</Top>
+    <Locked>False</Locked>
+    <Caption>مرحبًا</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Amiri</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:

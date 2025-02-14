@@ -1,0 +1,3 @@
+1^admin^123456^password
+2^Dil^0^0 olursa turkce , 1 olursa ingilizce
+3^Checkbox^1^Remember
