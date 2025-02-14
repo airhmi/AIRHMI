@@ -24,39 +24,23 @@
     <name>Slider1</name>
     <direction>horizontal</direction>
     <Left>156</Left>
-    <Top>284</Top>
+    <Top>285</Top>
     <Width>483</Width>
     <Height>40</Height>
     <Locked>False</Locked>
-    <Value>100</Value>
+    <Value>10</Value>
     <Visible>True</Visible>
     <Active>True</Active>
-    <Color>-5658199</Color>
+    <Color>-65536</Color>
     <Press_Color>0</Press_Color>
     <BackgroundColor>-8355712</BackgroundColor>
-    <ThumbColor>-9868951</ThumbColor>
+    <ThumbColor>-16776961</ThumbColor>
     <Range>100</Range>
     <Flat>False</Flat>
     <Tag>255</Tag>
     <Order />
-    <OnUp>#include "stdio.h"
-#include "string.h"
-#include "stdlib.h"
-#include "stk.h"
-
-
-char data[20];
-SliderGet("Slider1" , "Value" , data);
-
-printf("data:%s\n",data);
-
-BacklightSet(atoi(data));
-
-char yeniData[20];
-sprintf(yeniData, "%%%s", data);
-LabelSets("ELabel2" , yeniData );
-
-</OnUp>
+    <OnUp>
+    </OnUp>
     <OnDown>
     </OnDown>
     <OnClick>
@@ -76,35 +60,6 @@ LabelSets("ELabel2" , yeniData );
     </FontName2>
     <FontType>System Font</FontType>
     <FontSize>28</FontSize>
-    <Font_Color>-1</Font_Color>
-    <TextAligment>Start</TextAligment>
-    <Visible>True</Visible>
-    <Active>True</Active>
-    <Opacity>100</Opacity>
-    <Static>False</Static>
-    <Tag>255</Tag>
-    <Order />
-    <OnUp>
-    </OnUp>
-    <OnDown>
-    </OnDown>
-    <OnClick>
-    </OnClick>
-    <OnPress>
-    </OnPress>
-  </Controls>
-  <Controls ID="ELabel">
-    <name>ELabel2</name>
-    <Left>330</Left>
-    <Top>407</Top>
-    <Locked>False</Locked>
-    <Caption>%100</Caption>
-    <keyboard>None</keyboard>
-    <FontName>Matura MT Script Capitals</FontName>
-    <FontName2>
-    </FontName2>
-    <FontType>System Font</FontType>
-    <FontSize>36</FontSize>
     <Font_Color>-1</Font_Color>
     <TextAligment>Start</TextAligment>
     <Visible>True</Visible>

@@ -1,0 +1,54 @@
+﻿800:480;2
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>ttl</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="EveSlider">
+    <name>Slider1</name>
+    <direction>horizontal</direction>
+    <Left>148</Left>
+    <Top>127</Top>
+    <Width>483</Width>
+    <Height>107</Height>
+    <Locked>False</Locked>
+    <Value>10</Value>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Color>-65536</Color>
+    <Press_Color>0</Press_Color>
+    <BackgroundColor>-8355712</BackgroundColor>
+    <ThumbColor>-16776961</ThumbColor>
+    <Range>100</Range>
+    <Flat>False</Flat>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:

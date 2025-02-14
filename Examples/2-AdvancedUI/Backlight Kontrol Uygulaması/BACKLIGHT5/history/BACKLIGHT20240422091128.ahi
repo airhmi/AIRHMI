@@ -24,7 +24,7 @@
     <name>Slider1</name>
     <direction>horizontal</direction>
     <Left>156</Left>
-    <Top>284</Top>
+    <Top>285</Top>
     <Width>483</Width>
     <Height>40</Height>
     <Locked>False</Locked>
@@ -52,9 +52,7 @@ printf("data:%s\n",data);
 
 BacklightSet(atoi(data));
 
-char yeniData[20];
-sprintf(yeniData, "%%%s", data);
-LabelSets("ELabel2" , yeniData );
+LabelSets("ELabel2" , data );
 
 </OnUp>
     <OnDown>
