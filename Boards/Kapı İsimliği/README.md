@@ -1,6 +1,6 @@
-![Açıklama Metni](1.png)
+![Açıklama Metni](1.jpg)
 
-![Açıklama Metni](2.png)
+![Açıklama Metni](2.jpg)
 
 
 
