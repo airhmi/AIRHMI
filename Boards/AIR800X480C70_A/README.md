@@ -1,6 +1,6 @@
 # AIR800X480C70_A
 
-AIRHMI'nin 10.1 inç kapasitif dokunmatik gelişmiş HMI ekranı, endüstriyel kontrol ve otomasyon uygulamaları için tasarlanmış yüksek performanslı bir üründür. Bu ekran, 800x480 çözünürlüğe sahip TFT LCD paneli ve kapasitif dokunmatik özelliği ile kullanıcı dostu bir arayüz sunar.
+AIRHMI'nin 7 inç kapasitif dokunmatik gelişmiş HMI ekranı, endüstriyel kontrol ve otomasyon uygulamaları için tasarlanmış yüksek performanslı bir üründür. Bu ekran, 800x480 çözünürlüğe sahip TFT LCD paneli ve kapasitif dokunmatik özelliği ile kullanıcı dostu bir arayüz sunar.
 
 ## Temel Özellikler:
 
