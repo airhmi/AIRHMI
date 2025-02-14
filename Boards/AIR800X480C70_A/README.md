@@ -2,9 +2,8 @@
 
 ![Açıklama Metni](2.png)
 
-![Açıklama Metni](3.png)
+![Açıklama Metni](3.jpg)
 
-![Açıklama Metni](4.png)
+![Açıklama Metni](4.jpg)
 
-![Açıklama Metni](5.png)
 
