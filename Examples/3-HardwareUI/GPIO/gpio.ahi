@@ -1,0 +1,221 @@
+480:272;2
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>usb</UploadInterface>
+    <ofs>Screen1</ofs>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>panel1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="ETimer">
+    <name>ETimer1</name>
+    <Left>24</Left>
+    <Top>9</Top>
+    <Interval>100</Interval>
+    <Enable>True</Enable>
+    <event>#include "stk.h"
+#include "stdio.h"
+
+int val;
+
+char data[100];
+
+
+GPIO_Read("GPIO_1",&amp;val);
+sprintf(data,"%d",val);
+printf("GPIO_0:%s\n",data);
+LabelSet("ELabel4" ,"Caption"  , data);
+
+GPIO_Read("GPIO_2",&amp;val);
+sprintf(data,"%d",val);
+printf("GPIO_1:%s\n",data);
+LabelSet("ELabel5" ,"Caption"  , data);
+
+GPIO_Read("GPIO_3",&amp;val);
+sprintf(data,"%d",val);
+printf("GPIO_2:%s\n",data);
+LabelSet("ELabel6" ,"Caption"  , data);
+
+DrawScreen();
+
+</event>
+    <Modifiers>Private</Modifiers>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel1</name>
+    <Left>148</Left>
+    <Top>49</Top>
+    <Caption>GPIO 1 : </Caption>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>8</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel2</name>
+    <Left>148</Left>
+    <Top>101</Top>
+    <Caption>GPIO 2 :</Caption>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>8</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel3</name>
+    <Left>148</Left>
+    <Top>157</Top>
+    <Caption>GPIO 3:</Caption>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>8</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel4</name>
+    <Left>247</Left>
+    <Top>47</Top>
+    <Caption>Text</Caption>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>8</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel5</name>
+    <Left>247</Left>
+    <Top>101</Top>
+    <Caption>Text</Caption>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>8</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel6</name>
+    <Left>249</Left>
+    <Top>160</Top>
+    <Caption>Text</Caption>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>8</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:
