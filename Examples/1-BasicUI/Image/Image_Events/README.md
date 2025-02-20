@@ -8,6 +8,7 @@ Bu olay, kullanıcı HMI ekranında resmin üzerine dokunduğunda tetiklenir. Ya
 📌 Kullanım Senaryoları:
 
 Bir resime basıldığında anında görsel değişiklik yapmak (örneğin, gölgelendirme eklemek).
+
 Dokunulduğunda anında bir fonksiyon tetiklemek (örneğin, bir motoru başlatmak).
 
 
@@ -17,7 +18,9 @@ Bu olay, kullanıcı dokunmayı bıraktığında (parmağını ekrandan çektiğ
 📌 Kullanım Senaryoları:
 
 Dokunmayı bıraktıktan sonra bir işlemi başlatmak (örneğin, bir valfi açmak).
+
 OnDown sırasında değişen görsel efekti eski haline getirmek.
+
 Uzun basma işlemi tamamlandıktan sonra belirli bir komutu çalıştırmak.
 
 🔹 3. OnPress (Basılı Tutma)
@@ -26,7 +29,9 @@ Bu olay, kullanıcı resmin üzerinde belirli bir süre boyunca basılı tuttuğ
 📌 Kullanım Senaryoları:
 
 Uzun basınca ayar menüsünü açmak.
+
 Bir butonun basılı tutulduğu süre boyunca bir motorun hızını artırmak.
+
 Sürükleme veya seçme işlemleri için kullanılabilir.
 
 
