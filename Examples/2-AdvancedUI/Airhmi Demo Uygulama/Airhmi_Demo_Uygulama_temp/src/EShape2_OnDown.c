@@ -11,7 +11,7 @@ char data[200];
 LabelGet("MusicName" , "Text" , data);    
 
     
-AudioPlay(data, 0);
+AudioPlay(data, 100);
 
 Delay(100);
 
