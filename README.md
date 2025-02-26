@@ -5,4 +5,4 @@ AirHMI Visual Screen Creator, AirHMI LCD ekranları için İnsan Makine Arayüz�
 # Yapay Zeka Desteği
 
 
-[![GitHub Logo](img/airhmiLogo.png)](https://chatgpt.com/g/g-67bdb9fefaf0819188b0b92f73c22848-airhmi)
+[![GitHub Logo](img/chat_gpt.png)](https://chatgpt.com/g/g-67bdb9fefaf0819188b0b92f73c22848-airhmi)
