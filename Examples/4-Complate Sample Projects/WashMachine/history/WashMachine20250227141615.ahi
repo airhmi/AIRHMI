@@ -1,0 +1,275 @@
+﻿800:480;2
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>ttl</UploadInterface>
+    <ofs>Screen2</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton1</name>
+    <Left>7</Left>
+    <Top>5</Top>
+    <Width>189</Width>
+    <Height>91</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Başlat</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>26</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>True</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-65536</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Durdur</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>False</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EListWhell">
+    <name>ListWheel1</name>
+    <Left>16</Left>
+    <Top>168</Top>
+    <Locked>False</Locked>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Static>False</Static>
+    <VisibleDesing>True</VisibleDesing>
+    <selectedColor>-65536</selectedColor>
+    <unselectedColor>-8355712</unselectedColor>
+    <separatorColor>-8355712</separatorColor>
+    <backgroundColor>-1</backgroundColor>
+    <borderColor>-16777216</borderColor>
+    <List_File>ListWheel1_ListFile.txt</List_File>
+    <List_File_Data>Pamuklu
+Hassas
+Sentetik
+Hızlı
+</List_File_Data>
+    <Width>160</Width>
+    <Height>163</Height>
+    <FontName>Roboto</FontName>
+    <FontSize>16</FontSize>
+    <borderPenSize>12</borderPenSize>
+    <lineCount>3</lineCount>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox1</name>
+    <Width>158</Width>
+    <Height>50</Height>
+    <Left>18</Left>
+    <Top>109</Top>
+    <Locked>False</Locked>
+    <Caption>Program</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox2</name>
+    <Width>158</Width>
+    <Height>50</Height>
+    <Left>212</Left>
+    <Top>109</Top>
+    <Locked>False</Locked>
+    <Caption>Sıcaklık</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="EListWhell">
+    <name>ListWheel2</name>
+    <Left>214</Left>
+    <Top>168</Top>
+    <Locked>False</Locked>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Static>False</Static>
+    <VisibleDesing>True</VisibleDesing>
+    <selectedColor>-65536</selectedColor>
+    <unselectedColor>-8355712</unselectedColor>
+    <separatorColor>-8355712</separatorColor>
+    <backgroundColor>-1</backgroundColor>
+    <borderColor>-16777216</borderColor>
+    <List_File>ListWheel2_ListFile.txt</List_File>
+    <List_File_Data>30 C
+40 C
+60 C
+90 C
+</List_File_Data>
+    <Width>160</Width>
+    <Height>163</Height>
+    <FontName>Roboto</FontName>
+    <FontSize>16</FontSize>
+    <borderPenSize>12</borderPenSize>
+    <lineCount>3</lineCount>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox3</name>
+    <Width>158</Width>
+    <Height>62</Height>
+    <Left>614</Left>
+    <Top>19</Top>
+    <Locked>False</Locked>
+    <Caption>00:45</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>36</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox4</name>
+    <Width>125</Width>
+    <Height>34</Height>
+    <Left>232</Left>
+    <Top>5</Top>
+    <Locked>False</Locked>
+    <Caption>Kapak</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>12</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox5</name>
+    <Width>125</Width>
+    <Height>34</Height>
+    <Left>232</Left>
+    <Top>49</Top>
+    <Locked>False</Locked>
+    <Caption>Açık</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>18</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>ttl</UploadInterface>
+    <ofs>Screen2</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen2</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox6</name>
+    <Width>217</Width>
+    <Height>86</Height>
+    <Left>252</Left>
+    <Top>165</Top>
+    <Locked>False</Locked>
+    <Caption>LabelBox</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>28</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen2~FSCREEN:
