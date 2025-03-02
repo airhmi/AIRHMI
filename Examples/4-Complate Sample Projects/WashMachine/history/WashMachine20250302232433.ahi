@@ -58,48 +58,10 @@
     <Locked>False</Locked>
     <Modifiers>Private</Modifiers>
   </Controls>
-  <Controls ID="EVariable">
-    <name>VPKapakDurumu</name>
-    <Left>115</Left>
-    <Top>0</Top>
-    <Data>0</Data>
-    <Type>int</Type>
-    <Locked>False</Locked>
-    <Modifiers>Private</Modifiers>
-  </Controls>
-  <Controls ID="ETimer">
-    <name>Kapak</name>
-    <Locked>False</Locked>
-    <Left>59</Left>
-    <Top>0</Top>
-    <Interval>1000</Interval>
-    <Enable>True</Enable>
-    <event>#include "stk.h"
-
-int kapakDurumu; // Kapak durumunu saklamak için değişken tanımlanıyor.
-
-// SmartIO Modbus'un 1. dijital girişini (0x0001) okuyarak kapak durumunu alıyoruz.
-// Eğer giriş değeri 1 ise kapak açıktır, 0 ise kapalıdır.
-kapakDurumu = ReadCoils(1, 0x0001, 1);
-
-if(kapakDurumu &amp; 0x01) { 
-    // Eğer kapak açık (1) ise ekrana "Acik" yazdır
-    LabelSet("ELabelBox5", "Text", "Acik");
-} else {
-    // Eğer kapak kapalı (0) ise ekrana "Kapali" yazdır
-    LabelSet("ELabelBox5", "Text", "Kapali");
-}
-
-
-// Kapak durumunu AirHMI değişkenine kaydediyoruz (VPKapakDurumu değişkenine atama yapılıyor).
-VarSeti("VPKapakDurumu", kapakDurumu);
-</event>
-    <Modifiers>Private</Modifiers>
-  </Controls>
   <Controls ID="ETimer">
     <name>TimerYikama</name>
     <Locked>False</Locked>
-    <Left>3</Left>
+    <Left>115</Left>
     <Top>0</Top>
     <Interval>5000</Interval>
     <Enable>False</Enable>
@@ -171,6 +133,44 @@ void YikamaSureci() {
 
 
 YikamaSureci();
+</event>
+    <Modifiers>Private</Modifiers>
+  </Controls>
+  <Controls ID="EVariable">
+    <name>VPKapakDurumu</name>
+    <Left>59</Left>
+    <Top>0</Top>
+    <Data>0</Data>
+    <Type>int</Type>
+    <Locked>False</Locked>
+    <Modifiers>Private</Modifiers>
+  </Controls>
+  <Controls ID="ETimer">
+    <name>Kapak</name>
+    <Locked>False</Locked>
+    <Left>3</Left>
+    <Top>0</Top>
+    <Interval>1000</Interval>
+    <Enable>True</Enable>
+    <event>#include "stk.h"
+
+int kapakDurumu; // Kapak durumunu saklamak için değişken tanımlanıyor.
+
+// SmartIO Modbus'un 1. dijital girişini (0x0001) okuyarak kapak durumunu alıyoruz.
+// Eğer giriş değeri 1 ise kapak açıktır, 0 ise kapalıdır.
+kapakDurumu = ReadCoils(1, 0x0001, 1);
+
+if(kapakDurumu &amp; 0x01) { 
+    // Eğer kapak açık (1) ise ekrana "Acik" yazdır
+    LabelSet("ELabelBox5", "Text", "Acik");
+} else {
+    // Eğer kapak kapalı (0) ise ekrana "Kapali" yazdır
+    LabelSet("ELabelBox5", "Text", "Kapali");
+}
+
+
+// Kapak durumunu AirHMI değişkenine kaydediyoruz (VPKapakDurumu değişkenine atama yapılıyor).
+VarSeti("VPKapakDurumu", kapakDurumu);
 </event>
     <Modifiers>Private</Modifiers>
   </Controls>

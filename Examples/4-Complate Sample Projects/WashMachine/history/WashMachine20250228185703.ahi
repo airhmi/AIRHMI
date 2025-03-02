@@ -1,0 +1,472 @@
+﻿800:480;2
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>ttl</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="EVariable">
+    <name>VPAshama</name>
+    <Left>171</Left>
+    <Top>0</Top>
+    <Data>0</Data>
+    <Type>int</Type>
+    <Locked>False</Locked>
+    <Modifiers>Private</Modifiers>
+  </Controls>
+  <Controls ID="ETimer">
+    <name>TimerYikama</name>
+    <Locked>False</Locked>
+    <Left>115</Left>
+    <Top>0</Top>
+    <Interval>5000</Interval>
+    <Enable>False</Enable>
+    <event>#include "stk.h"
+#include "stdio.h"
+
+void YikamaSureci() {
+    int asama;
+    
+    // Variable Get ile aşamayı oku
+    VarGet("VPAshama", &amp;asama);
+
+    switch(asama) {
+        case 0:
+            LabelSet("ELabelStatus", "Text", "Su Alınıyor...");
+             LabelSet("ELabelBox3", "Text", "00:45");
+            WriteSingleCoil(1, 0x0000, 0xFF00); // Su giriş valfini aç
+            Delay(5000);
+            WriteSingleCoil(1, 0x0000, 0x0000); // Su giriş valfini kapat
+            asama++; // Bir sonraki aşamaya geç
+            break;
+
+        case 1:
+            LabelSet("ELabelStatus", "Text", "Yıkama Yapılıyor...");
+            LabelSet("ELabelBox3", "Text", "00:30");
+            WriteSingleCoil(1, 0x0002, 0xFF00); // Motoru çalıştır
+            Delay(10000);
+            WriteSingleCoil(1, 0x0002, 0x0000); // Motoru kapat
+            asama++;
+            break;
+
+        case 2:
+            LabelSet("ELabelStatus", "Text", "Durulama Yapılıyor...");
+            LabelSet("ELabelBox3", "Text", "00:20");
+            WriteSingleCoil(1, 0x0001, 0xFF00); // Su tahliye valfini aç
+            Delay(5000);
+            WriteSingleCoil(1, 0x0001, 0x0000); // Su tahliye valfini kapat
+            asama++;
+            break;
+
+        case 3:
+            LabelSet("ELabelStatus", "Text", "Sıkma Yapılıyor...");
+            LabelSet("ELabelBox3", "Text", "00:10");
+            WriteSingleCoil(1, 0x0003, 0xFF00); // Sıkma motorunu aç
+            Delay(8000);
+            WriteSingleCoil(1, 0x0003, 0x0000); // Motoru kapat
+            asama++;
+            break;
+
+        case 4:
+            LabelSet("ELabelStatus", "Text", "Yıkama Tamamlandı!");
+            LabelSet("ELabelBox3", "Text", "00:00");
+            TimerSet("TimerYikama", "Enable", "0"); // Timer'ı durdur
+            asama = 0; // Aşamayı sıfırla
+            break;
+    }
+
+    // Güncellenmiş aşamayı variable'a kaydet
+    VarSeti("VPAshama", asama);
+}
+
+
+printf("Timer bsaliyor.");
+YikamaSureci();
+
+
+</event>
+    <Modifiers>Private</Modifiers>
+  </Controls>
+  <Controls ID="EVariable">
+    <name>VPKapakDurumu</name>
+    <Left>59</Left>
+    <Top>0</Top>
+    <Data>0</Data>
+    <Type>int</Type>
+    <Locked>False</Locked>
+    <Modifiers>Private</Modifiers>
+  </Controls>
+  <Controls ID="ETimer">
+    <name>Kapak</name>
+    <Locked>False</Locked>
+    <Left>3</Left>
+    <Top>0</Top>
+    <Interval>1000</Interval>
+    <Enable>False</Enable>
+    <event>#include "stk.h"
+
+int kapakDurumu;
+
+// 1. girişin değerini oku (Kapak Açık: 1, Kapak Kapalı: 0)
+kapakDurumu = ReadCoils(1, 0x0001, 1);
+
+if(kapakDurumu &amp; 0x01) {
+    LabelSet("ELabelBox5", "Text", "Acik");
+} else {
+    LabelSet("ELabelBox5", "Text", "Kapali");
+}
+
+
+// Kapak durumunu değişkene ata
+VarSeti("VPKapakDurumu", kapakDurumu);
+    
+    </event>
+    <Modifiers>Private</Modifiers>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton1</name>
+    <Left>7</Left>
+    <Top>6</Top>
+    <Width>189</Width>
+    <Height>91</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Başlat</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>26</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>True</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-65536</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Durdur</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>False</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+
+int kapakDurumu;
+VarGet("VPKapakDurumu", &amp;kapakDurumu);
+
+if(kapakDurumu == 0) { // Kapak kapalıysa başlat
+    LabelSet("ELabelStatus", "Text", "Yikama Baslatiliyor...");
+    WriteSingleCoil(1, 0x0002, 0xFF00);  // Motoru çalıştır
+    TimerSet("TimerYikama", "Enable", "1");
+} else {
+    LabelSet("ELabelStatus", "Text", "Kapak Acik! Kapatiniz.");
+}</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EListWhell">
+    <name>ListWheel1</name>
+    <Left>16</Left>
+    <Top>168</Top>
+    <Locked>False</Locked>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Static>False</Static>
+    <VisibleDesing>True</VisibleDesing>
+    <selectedColor>-65536</selectedColor>
+    <unselectedColor>-8355712</unselectedColor>
+    <separatorColor>-8355712</separatorColor>
+    <backgroundColor>-1</backgroundColor>
+    <borderColor>-16777216</borderColor>
+    <List_File>ListWheel1_ListFile.txt</List_File>
+    <List_File_Data>Pamuklu
+Hassas
+Sentetik
+Hızlı
+</List_File_Data>
+    <Width>160</Width>
+    <Height>163</Height>
+    <FontName>Roboto</FontName>
+    <FontSize>16</FontSize>
+    <borderPenSize>12</borderPenSize>
+    <lineCount>3</lineCount>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox1</name>
+    <Width>158</Width>
+    <Height>50</Height>
+    <Left>18</Left>
+    <Top>109</Top>
+    <Locked>False</Locked>
+    <Caption>Program</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox2</name>
+    <Width>158</Width>
+    <Height>50</Height>
+    <Left>212</Left>
+    <Top>109</Top>
+    <Locked>False</Locked>
+    <Caption>Sıcaklık</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>24</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="EListWhell">
+    <name>ListWheel2</name>
+    <Left>214</Left>
+    <Top>168</Top>
+    <Locked>False</Locked>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Static>False</Static>
+    <VisibleDesing>True</VisibleDesing>
+    <selectedColor>-65536</selectedColor>
+    <unselectedColor>-8355712</unselectedColor>
+    <separatorColor>-8355712</separatorColor>
+    <backgroundColor>-1</backgroundColor>
+    <borderColor>-16777216</borderColor>
+    <List_File>ListWheel2_ListFile.txt</List_File>
+    <List_File_Data>30 C
+40 C
+60 C
+90 C
+</List_File_Data>
+    <Width>160</Width>
+    <Height>163</Height>
+    <FontName>Roboto</FontName>
+    <FontSize>16</FontSize>
+    <borderPenSize>12</borderPenSize>
+    <lineCount>3</lineCount>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox3</name>
+    <Width>158</Width>
+    <Height>62</Height>
+    <Left>614</Left>
+    <Top>19</Top>
+    <Locked>False</Locked>
+    <Caption>00:45</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>36</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox4</name>
+    <Width>125</Width>
+    <Height>34</Height>
+    <Left>232</Left>
+    <Top>5</Top>
+    <Locked>False</Locked>
+    <Caption>Kapak</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>12</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox5</name>
+    <Width>125</Width>
+    <Height>34</Height>
+    <Left>232</Left>
+    <Top>49</Top>
+    <Locked>False</Locked>
+    <Caption>Açık</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>18</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelStatus</name>
+    <Width>757</Width>
+    <Height>66</Height>
+    <Left>13</Left>
+    <Top>403</Top>
+    <Locked>False</Locked>
+    <Caption>LabelBox</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>36</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>ttl</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen2</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelBox6</name>
+    <Width>249</Width>
+    <Height>82</Height>
+    <Left>522</Left>
+    <Top>28</Top>
+    <Locked>False</Locked>
+    <Caption>LabelBox</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>28</FontSize>
+    <Font_Color>-65536</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>20</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton2</name>
+    <Left>26</Left>
+    <Top>16</Top>
+    <Width>155</Width>
+    <Height>65</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>EButton2</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>12</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-1</Color>
+    <ColorTo>-16728065</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>Top to Bottom</Gradient>
+    <Static>False</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen2~FSCREEN:

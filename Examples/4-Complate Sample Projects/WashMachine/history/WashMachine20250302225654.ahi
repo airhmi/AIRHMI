@@ -23,33 +23,6 @@
     </BackgroundPictureHex>
   </Controls>
   <Controls ID="EVariable">
-    <name>VPYikamaSuresi</name>
-    <Left>339</Left>
-    <Top>0</Top>
-    <Data>0</Data>
-    <Type>int</Type>
-    <Locked>False</Locked>
-    <Modifiers>Private</Modifiers>
-  </Controls>
-  <Controls ID="EVariable">
-    <name>VPProgramSecimi</name>
-    <Left>283</Left>
-    <Top>0</Top>
-    <Data>0</Data>
-    <Type>String</Type>
-    <Locked>False</Locked>
-    <Modifiers>Private</Modifiers>
-  </Controls>
-  <Controls ID="EVariable">
-    <name>Zaman</name>
-    <Left>227</Left>
-    <Top>0</Top>
-    <Data>00:45</Data>
-    <Type>String</Type>
-    <Locked>False</Locked>
-    <Modifiers>Private</Modifiers>
-  </Controls>
-  <Controls ID="EVariable">
     <name>VPAshama</name>
     <Left>171</Left>
     <Top>0</Top>
@@ -58,9 +31,82 @@
     <Locked>False</Locked>
     <Modifiers>Private</Modifiers>
   </Controls>
+  <Controls ID="ETimer">
+    <name>TimerYikama</name>
+    <Locked>False</Locked>
+    <Left>115</Left>
+    <Top>0</Top>
+    <Interval>5000</Interval>
+    <Enable>False</Enable>
+    <event>#include "stk.h"
+#include "stdio.h"
+
+void YikamaSureci() {
+    int asama;
+    
+    // Variable Get ile aşamayı oku
+    VarGet("VPAshama", &amp;asama);
+
+    switch(asama) {
+        case 0:
+            LabelSet("ELabelStatus", "Text", "Su Alınıyor...");
+             LabelSet("ELabelBox3", "Text", "00:45");
+            WriteSingleCoil(1, 0x0000, 0xFF00); // Su giriş valfini aç
+            Delay(5000);
+            WriteSingleCoil(1, 0x0000, 0x0000); // Su giriş valfini kapat
+            asama++; // Bir sonraki aşamaya geç
+            break;
+
+        case 1:
+            LabelSet("ELabelStatus", "Text", "Yıkama Yapılıyor...");
+            LabelSet("ELabelBox3", "Text", "00:30");
+            WriteSingleCoil(1, 0x0002, 0xFF00); // Motoru çalıştır
+            Delay(10000);
+            WriteSingleCoil(1, 0x0002, 0x0000); // Motoru kapat
+            asama++;
+            break;
+
+        case 2:
+            LabelSet("ELabelStatus", "Text", "Durulama Yapılıyor...");
+            LabelSet("ELabelBox3", "Text", "00:20");
+            WriteSingleCoil(1, 0x0001, 0xFF00); // Su tahliye valfini aç
+            Delay(5000);
+            WriteSingleCoil(1, 0x0001, 0x0000); // Su tahliye valfini kapat
+            asama++;
+            break;
+
+        case 3:
+            LabelSet("ELabelStatus", "Text", "Sıkma Yapılıyor...");
+            LabelSet("ELabelBox3", "Text", "00:10");
+            WriteSingleCoil(1, 0x0003, 0xFF00); // Sıkma motorunu aç
+            Delay(8000);
+            WriteSingleCoil(1, 0x0003, 0x0000); // Motoru kapat
+            asama++;
+            break;
+
+        case 4:
+            LabelSet("ELabelStatus", "Text", "Yıkama Tamamlandı!");
+            LabelSet("ELabelBox3", "Text", "00:00");
+            TimerSet("TimerYikama", "Enable", "0"); // Timer'ı durdur
+            asama = 0; // Aşamayı sıfırla
+            break;
+    }
+
+    // Güncellenmiş aşamayı variable'a kaydet
+    VarSeti("VPAshama", asama);
+}
+
+
+printf("Timer bsaliyor.");
+YikamaSureci();
+
+
+</event>
+    <Modifiers>Private</Modifiers>
+  </Controls>
   <Controls ID="EVariable">
     <name>VPKapakDurumu</name>
-    <Left>115</Left>
+    <Left>59</Left>
     <Top>0</Top>
     <Data>0</Data>
     <Type>int</Type>
@@ -70,108 +116,29 @@
   <Controls ID="ETimer">
     <name>Kapak</name>
     <Locked>False</Locked>
-    <Left>59</Left>
+    <Left>3</Left>
     <Top>0</Top>
     <Interval>1000</Interval>
     <Enable>True</Enable>
     <event>#include "stk.h"
 
-int kapakDurumu; // Kapak durumunu saklamak için değişken tanımlanıyor.
+int kapakDurumu;
 
-// SmartIO Modbus'un 1. dijital girişini (0x0001) okuyarak kapak durumunu alıyoruz.
-// Eğer giriş değeri 1 ise kapak açıktır, 0 ise kapalıdır.
+// 1. girişin değerini oku (Kapak Açık: 1, Kapak Kapalı: 0)
 kapakDurumu = ReadCoils(1, 0x0001, 1);
 
-if(kapakDurumu &amp; 0x01) { 
-    // Eğer kapak açık (1) ise ekrana "Acik" yazdır
+if(kapakDurumu &amp; 0x01) {
     LabelSet("ELabelBox5", "Text", "Acik");
 } else {
-    // Eğer kapak kapalı (0) ise ekrana "Kapali" yazdır
     LabelSet("ELabelBox5", "Text", "Kapali");
 }
 
 
-// Kapak durumunu AirHMI değişkenine kaydediyoruz (VPKapakDurumu değişkenine atama yapılıyor).
+kapakDurumu = 1;
+// Kapak durumunu değişkene ata
 VarSeti("VPKapakDurumu", kapakDurumu);
-</event>
-    <Modifiers>Private</Modifiers>
-  </Controls>
-  <Controls ID="ETimer">
-    <name>TimerYikama</name>
-    <Locked>False</Locked>
-    <Left>3</Left>
-    <Top>0</Top>
-    <Interval>5000</Interval>
-    <Enable>False</Enable>
-    <event>#include "stk.h"
-#include "stdio.h"
-
-void YikamaSureci() {
-    int asama;
-    int sure;
-    char zamanStr[10];
-
-    // Aşama ve süre değişkenlerini oku
-    VarGet("VPAshama", &amp;asama);
-    VarGet("VPYikamaSuresi", &amp;sure);
-
-    switch(asama) {
-        case 0:
-        LabelSet("ELabelStatus", "Text", "Su Aliniyor...");
-            sure -= 5; // 5 saniye azalt
-            WriteSingleCoil(1, 0x0000, 0xFF00); // Su giriş valfini aç
-            Delay(5000);
-            WriteSingleCoil(1, 0x0000, 0x0000); // Su giriş valfini kapat
-            asama++; // Bir sonraki aşamaya geç
-            break;
-
-        case 1:
-            LabelSet("ELabelStatus", "Text", "Yikama Yapiliyor...");
-            sure -= 10; // 10 saniye azalt
-            WriteSingleCoil(1, 0x0002, 0xFF00); // Motoru çalıştır
-            Delay(10000);
-            WriteSingleCoil(1, 0x0002, 0x0000); // Motoru kapat
-            asama++;
-            break;
-
-        case 2:
-            LabelSet("ELabelStatus", "Text", "Durulama Yapiliyor...");
-            sure -= 5; // 5 saniye azalt
-            WriteSingleCoil(1, 0x0001, 0xFF00); // Su tahliye valfini aç
-            Delay(5000);
-            WriteSingleCoil(1, 0x0001, 0x0000); // Su tahliye valfini kapat
-            asama++;
-            break;
-
-        case 3:
-            LabelSet("ELabelStatus", "Text", "Sikma Yapiliyor...");
-            sure -= 8; // 8 saniye azalt
-            WriteSingleCoil(1, 0x0003, 0xFF00); // Sıkma motorunu aç
-            Delay(8000);
-            WriteSingleCoil(1, 0x0003, 0x0000); // Motoru kapat
-            asama++;
-            break;
-
-        case 4:
-            LabelSet("ELabelStatus", "Text", "Yikama Tamamlandi!");
-            sure = 0; // Süreyi sıfırla
-            TimerSet("TimerYikama", "Enable", "False"); // Timer'ı durdur
-            asama = 0; // Aşamayı sıfırla
-            break;
-    }
-
-    // Süreyi ekrana yazdır
-    sprintf(zamanStr, "00:%02d", sure);
-    LabelSet("ELabelZaman", "Text", zamanStr);
-
-    // Güncellenmiş aşama ve süreyi değişkenlere kaydet
-    VarSeti("VPAshama", asama);
-    VarSeti("VPYikamaSuresi", sure);
-}
-
-
-YikamaSureci();
-</event>
+    
+    </event>
     <Modifiers>Private</Modifiers>
   </Controls>
   <Controls ID="EButton">
@@ -216,73 +183,18 @@ YikamaSureci();
     <OnUp>
     </OnUp>
     <OnDown>#include "stk.h"
-#include "stdio.h"
-#include "string.h"
-#include "stdlib.h"
 
-// Kapak durumunu kontrol etmek için değişken tanımlıyoruz.
+
 int kapakDurumu;
-
-// Daha önce saklanan kapak durumunu değişkene alıyoruz.
-// Eğer kapak kapalıysa (1), yıkama başlatılabilir.
 VarGet("VPKapakDurumu", &amp;kapakDurumu);
 
-if(kapakDurumu == 1) { // Kapak kapalıysa işlemi başlat
-
-    char seciliProgram[20]; // Seçili programı saklamak için karakter dizisi tanımlanıyor.
-
-    // Kullanıcının seçtiği yıkama programını list wheel'den alıyoruz.
-    ListWheelGet("ListWheel1", "Value", seciliProgram);
-
-    // Seçilen programı bir değişkene kaydediyoruz.
-    VarSet("VPProgramSecimi", seciliProgram);
-
-    // Seçilen programın bilgisini konsola yazdırıyoruz (debug amaçlı).
-    printf("VPProgramSecimi:%s \n", seciliProgram);
-
-    int sure; // Yıkama süresi için değişken tanımlıyoruz.
-
-    // Kaydedilen program bilgisini değişkenden geri okuyoruz.
-    VarGet("VPProgramSecimi", seciliProgram);
-
-    // Seçilen programın süresini belirliyoruz.
-    if(strcmp(seciliProgram, "Pamuklu") == 0) {
-        sure = 45; // Pamuklu programı için 45 dakika
-    } else if(strcmp(seciliProgram, "Hassas") == 0) {
-        sure = 30; // Hassas programı için 30 dakika
-    } else if(strcmp(seciliProgram, "Sentetik") == 0) {
-        sure = 40; // Sentetik programı için 40 dakika
-    } else if(strcmp(seciliProgram, "Hizli") == 0) {
-        sure = 15; // Hızlı yıkama programı için 15 dakika
-    }
-
-    // Yıkama süresini değişken olarak kaydediyoruz.
-    VarSeti("VPYikamaSuresi", sure);
-
-    // Yıkama süresini "00:XX" formatında ekrana göstermek için stringe çeviriyoruz.
-    char zamanStr[10];
-    sprintf(zamanStr, "00:%02d", sure);
-
-    // Zaman bilgisini değişkene kaydediyoruz.
-    VarSet("VPZaman", zamanStr);
-
-    // Ekranda zaman bilgisini gösteriyoruz.
-    LabelSet("ELabelZaman", "Text", zamanStr);    
-
-    // Kullanıcıya yıkama işleminin başladığını gösteriyoruz.
+if(kapakDurumu == 1) { // Kapak kapalıysa başlat
     LabelSet("ELabelStatus", "Text", "Yikama Baslatiliyor...");
-
-    // Motoru çalıştırmak için SmartIO Modbus'taki röleyi aktifleştiriyoruz.
-    WriteSingleCoil(1, 0x0002, 0xFF00);  
-
-    // Yıkama sürecini başlatan Timer'ı etkin hale getiriyoruz.
+    WriteSingleCoil(1, 0x0002, 0xFF00);  // Motoru çalıştır
     TimerSet("TimerYikama", "Enable", "1");
-
 } else {
-    // Eğer kapak açıksa, kullanıcıya uyarı veriyoruz.
     LabelSet("ELabelStatus", "Text", "Kapak Acik! Kapatiniz.");
-}
-</OnDown>
+}</OnDown>
     <OnClick>
     </OnClick>
     <OnPress>
@@ -306,7 +218,7 @@ if(kapakDurumu == 1) { // Kapak kapalıysa işlemi başlat
     <List_File_Data>Pamuklu
 Hassas
 Sentetik
-Hizli
+Hızlı
 </List_File_Data>
     <Width>160</Width>
     <Height>163</Height>
@@ -385,7 +297,7 @@ Hizli
     <Order />
   </Controls>
   <Controls ID="ELabelBox">
-    <name>ELabelZaman</name>
+    <name>ELabelBox3</name>
     <Width>158</Width>
     <Height>62</Height>
     <Left>614</Left>
@@ -395,7 +307,7 @@ Hizli
     <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
     <FontSize>36</FontSize>
-    <Font_Color>-1</Font_Color>
+    <Font_Color>-65536</Font_Color>
     <TextAligment>Center</TextAligment>
     <Visible>True</Visible>
     <Active>True</Active>
@@ -455,7 +367,7 @@ Hizli
     <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
     <FontSize>36</FontSize>
-    <Font_Color>-1</Font_Color>
+    <Font_Color>-65536</Font_Color>
     <TextAligment>Start</TextAligment>
     <Visible>True</Visible>
     <Active>True</Active>
