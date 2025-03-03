@@ -5,7 +5,7 @@
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>usb</UploadInterface>
+    <UploadInterface>ttl</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>
@@ -155,37 +155,6 @@ ChangeScreenSet("Screen2");
     <Tag>255</Tag>
     <Order />
   </Controls>
-  <Controls ID="EListView">
-    <name>ListView1</name>
-    <Left>70</Left>
-    <Top>108</Top>
-    <Locked>False</Locked>
-    <Enabled>False</Enabled>
-    <Visible>True</Visible>
-    <VisibleDesing>True</VisibleDesing>
-    <Header_BackGround_Color>-4144960</Header_BackGround_Color>
-    <Header_Font_Color>-65536</Header_Font_Color>
-    <Caption>165</Caption>
-    <Header_Font_Size>16</Header_Font_Size>
-    <Header_Height>50</Header_Height>
-    <Header_List>Num^Name^Surname^Number</Header_List>
-    <Header_List_Size>50^100^150^200</Header_List_Size>
-    <Header_Type>int^str^str^str</Header_Type>
-    <Grid_Vis>True</Grid_Vis>
-    <Enable_Motion>True</Enable_Motion>
-    <Grid_Font>Roboto</Grid_Font>
-    <Grid_Font_Size>16</Grid_Font_Size>
-    <Grid_Font_Color>-16777216</Grid_Font_Color>
-    <BackGround_Color>-4144960</BackGround_Color>
-    <Selected_Item_Color>-16776961</Selected_Item_Color>
-    <List_File>ListView1_ListFile.txt</List_File>
-    <List_File_Data>1^AIRHMI^HMI^5
-</List_File_Data>
-    <Enable_Sort>1</Enable_Sort>
-    <Width>404</Width>
-    <Height>240</Height>
-    <Order />
-  </Controls>
   <Controls ID="ELabelBox">
     <name>ELabelBox5</name>
     <Width>153</Width>
@@ -266,6 +235,37 @@ ChangeScreenSet("Screen2");
     <Tag>255</Tag>
     <Order />
   </Controls>
+  <Controls ID="EListView">
+    <name>ListView1</name>
+    <Left>36</Left>
+    <Top>117</Top>
+    <Locked>False</Locked>
+    <Enabled>False</Enabled>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Header_BackGround_Color>-4144960</Header_BackGround_Color>
+    <Header_Font_Color>-65536</Header_Font_Color>
+    <Caption>Roboto</Caption>
+    <Header_Font_Size>16</Header_Font_Size>
+    <Header_Height>50</Header_Height>
+    <Header_List>Num^Name^Surname^Number</Header_List>
+    <Header_List_Size>50^100^150^200</Header_List_Size>
+    <Header_Type>int^str^str^str</Header_Type>
+    <Grid_Vis>True</Grid_Vis>
+    <Enable_Motion>True</Enable_Motion>
+    <Grid_Font>Roboto</Grid_Font>
+    <Grid_Font_Size>16</Grid_Font_Size>
+    <Grid_Font_Color>-16777216</Grid_Font_Color>
+    <BackGround_Color>-4144960</BackGround_Color>
+    <Selected_Item_Color>-16776961</Selected_Item_Color>
+    <List_File>ListView1_ListFile.txt</List_File>
+    <List_File_Data>^AIRHMI^HMI^5
+</List_File_Data>
+    <Enable_Sort>1</Enable_Sort>
+    <Width>477</Width>
+    <Height>240</Height>
+    <Order />
+  </Controls>
 </AirPanelPC>
 ~SCREEN:Screen1~FSCREEN:
 <?xml version="1.0" encoding="utf-8"?>
@@ -274,7 +274,7 @@ ChangeScreenSet("Screen2");
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>usb</UploadInterface>
+    <UploadInterface>ttl</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>

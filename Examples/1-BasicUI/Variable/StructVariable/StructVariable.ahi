@@ -24,8 +24,8 @@
   </Controls>
   <Controls ID="EVariable">
     <name>data</name>
-    <Left>4</Left>
-    <Top>10</Top>
+    <Left>3</Left>
+    <Top>0</Top>
     <Data>
     </Data>
     <Type>Struct</Type>
@@ -98,6 +98,8 @@ for(i=0;i&lt;10;i++)
 }
 
 StructSet("data" , &amp;data,sizeof(data_t));
+
+VariableSave("data");
 
 
 

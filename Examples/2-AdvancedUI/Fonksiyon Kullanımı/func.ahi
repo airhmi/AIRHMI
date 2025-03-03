@@ -1,4 +1,4 @@
-800:480;2
+﻿800:480;2
 <?xml version="1.0" encoding="utf-8"?>
 <AirPanelPC>
   <Controls ID="Options">
@@ -33,6 +33,8 @@ int topla(int a , int b )
     <Top>102</Top>
     <Width>379</Width>
     <Height>178</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
     <Caption>TOPLA</Caption>
     <SoundOnOff>False</SoundOnOff>
     <SoundName>Sound1</SoundName>
@@ -46,13 +48,17 @@ int topla(int a , int b )
     <Visible>True</Visible>
     <VisibleDesing>True</VisibleDesing>
     <Active>True</Active>
+    <PushPull>False</PushPull>
     <Opacity>100</Opacity>
     <Color>-4144960</Color>
     <ColorTo>-4144960</ColorTo>
     <Press_Color>-1</Press_Color>
     <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
     <Gradient>None</Gradient>
     <Static>False</Static>
+    <Permanent>False</Permanent>
     <Pen_Color>-16777216</Pen_Color>
     <Pen_Width>1</Pen_Width>
     <Effect>0</Effect>
@@ -68,7 +74,7 @@ int topla(int a , int b )
 int sonuc = topla(3,2);
 char data[100];
 
-sprintf(data,"Toplama Sonucu:%d",sounc);
+sprintf(data,"Toplama Sonucu:%d",sonuc);
 
 LabelSet("ELabel1" ,"Text"  , data);
 printf("Toplama sounucu:%d \n",sonuc);
@@ -82,7 +88,9 @@ printf("Toplama sounucu:%d \n",sonuc);
     <name>ELabel1</name>
     <Left>300</Left>
     <Top>324</Top>
+    <Locked>False</Locked>
     <Caption>AIRHMI</Caption>
+    <keyboard>None</keyboard>
     <FontName>Roboto</FontName>
     <FontName2>
     </FontName2>
