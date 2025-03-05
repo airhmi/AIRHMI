@@ -89,7 +89,6 @@ if(kapakDurumu &amp; 0x01) {
 } else {
     // Eğer kapak kapalı (0) ise ekrana "Kapali" yazdır
     LabelSet("ELabelBox5", "Text", "Acik");
-    kapakDurumu = 0;
 }
 
 
