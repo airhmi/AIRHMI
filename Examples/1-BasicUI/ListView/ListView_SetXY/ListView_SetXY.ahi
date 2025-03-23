@@ -5,7 +5,7 @@
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>usb</UploadInterface>
+    <UploadInterface>ttl</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>
@@ -171,6 +171,7 @@ ChangeScreenSet("Screen2");
     <Selected_Item_Color>-16776961</Selected_Item_Color>
     <List_File>ListView1_ListFile.txt</List_File>
     <List_File_Data>1^AIRHMI^HMI^5
+2^1231^123^5
 </List_File_Data>
     <Enable_Sort>1</Enable_Sort>
     <Width>404</Width>
@@ -185,7 +186,7 @@ ChangeScreenSet("Screen2");
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>usb</UploadInterface>
+    <UploadInterface>ttl</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>

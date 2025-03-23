@@ -205,7 +205,7 @@ ChangeScreenSet("Screen2");
     <VisibleDesing>True</VisibleDesing>
     <Header_BackGround_Color>-4144960</Header_BackGround_Color>
     <Header_Font_Color>-65536</Header_Font_Color>
-    <Caption>Roboto</Caption>
+    <Caption>165</Caption>
     <Header_Font_Size>16</Header_Font_Size>
     <Header_Height>50</Header_Height>
     <Header_List>Num^Name^Surname^Number</Header_List>
@@ -219,7 +219,7 @@ ChangeScreenSet("Screen2");
     <BackGround_Color>-4144960</BackGround_Color>
     <Selected_Item_Color>-16776961</Selected_Item_Color>
     <List_File>ListView1_ListFile.txt</List_File>
-    <List_File_Data>1^Airhmi^HMI^5
+    <List_File_Data>1^airhmi^eyza^5
 </List_File_Data>
     <Enable_Sort>1</Enable_Sort>
     <Width>404</Width>

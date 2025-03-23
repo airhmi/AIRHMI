@@ -5,7 +5,7 @@
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>usb</UploadInterface>
+    <UploadInterface>ttl</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>
@@ -309,7 +309,7 @@ ChangeScreenSet("Screen2");
     <DeviceComPort>
     </DeviceComPort>
     <DeviceBautRate>115200</DeviceBautRate>
-    <UploadInterface>usb</UploadInterface>
+    <UploadInterface>ttl</UploadInterface>
     <ofs>Screen1</ofs>
     <StartVideoStorage>Flash</StartVideoStorage>
   </Controls>
@@ -369,8 +369,8 @@ ChangeScreenSet("Screen2");
     </OnUp>
     <OnDown>#include "stk.h"
 
-ImageSet("EImage1" ,"Active" , "TRUE");
-ImageSet("EImage2" ,"Active" , "TRUE");
+ImageSet("EImage1" ,"Active" , "True");
+ImageSet("EImage2" ,"Active" , "True");
 
 </OnDown>
     <OnClick>
