@@ -6,3 +6,9 @@
 Uart üzerinden veri alma hızlandırıldı. 
 Bazı hata düzeltmeleri yapıldı. 
 
+# Version 5.03
+Uart üzerinden veri alma hızlandırıldı. 
+Dokunmatik hassasiyeti arttırıldı.
+Hızlandırma optimizasyonu yapıldı.
+Klavye ye cancel ve info kısımları eklendi.
+
