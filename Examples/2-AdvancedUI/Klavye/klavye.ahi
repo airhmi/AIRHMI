@@ -1,0 +1,749 @@
+﻿800:480;2
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>ttl</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="ETimer">
+    <name>ETimer1</name>
+    <Locked>False</Locked>
+    <Left>3</Left>
+    <Top>0</Top>
+    <Interval>100</Interval>
+    <Enable>True</Enable>
+    <event>#include "stk.h"
+
+if( isTouched() )
+    LabelSets("ELabel12" ,"Touched" );
+else
+    LabelSets("ELabel12" ,"" );
+
+
+</event>
+    <Modifiers>Private</Modifiers>
+  </Controls>
+  <Controls ID="EShape">
+    <name>EShape1</name>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Left>239</Left>
+    <Top>93</Top>
+    <Width>260</Width>
+    <Height>82</Height>
+    <Locked>False</Locked>
+    <AutoSize>False</AutoSize>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+
+
+char LabelData[100];
+char data[100];
+
+LabelGet("ELabel1" , "Text" ,  LabelData);
+
+printf("LabelData:%s \n",LabelData);
+
+KeypadAlpha(LabelData, data );
+
+LabelSets("ELabel1" , data);
+
+printf("You Pressed here...!!!\n");
+
+
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel1</name>
+    <Left>290</Left>
+    <Top>112</Top>
+    <Locked>False</Locked>
+    <Caption>KeypadAlphaX</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EShape">
+    <name>EShape2</name>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Left>238</Left>
+    <Top>184</Top>
+    <Width>260</Width>
+    <Height>82</Height>
+    <Locked>False</Locked>
+    <AutoSize>False</AutoSize>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+
+
+char LabelData[100];
+char data[100];
+
+LabelGet("ELabel2" , "Text" ,  LabelData);
+
+// KeypadAlphaExt(char *inData, char *outData , int timeout , int maxCharacter )
+KeypadAlphaExt(LabelData, data , 30000, 4 , "Temp" );
+
+LabelSets("ELabel2" , data);
+
+
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel2</name>
+    <Left>244</Left>
+    <Top>206</Top>
+    <Locked>False</Locked>
+    <Caption>KeypadAlphaExt</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton1</name>
+    <Left>612</Left>
+    <Top>381</Top>
+    <Width>120</Width>
+    <Height>60</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Next</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>22</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-4144960</Color>
+    <ColorTo>-4144960</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>None</Gradient>
+    <Static>False</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+
+ChangeScreenSet("Screen2");
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EShape">
+    <name>EShape5</name>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Left>238</Left>
+    <Top>274</Top>
+    <Width>260</Width>
+    <Height>82</Height>
+    <Locked>False</Locked>
+    <AutoSize>False</AutoSize>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+
+
+char LabelData[100];
+char data[100];
+
+LabelGet("ELabel5" , "Text" ,  LabelData);
+
+KeypadNum("", data );
+
+LabelSets("ELabel5" , data);
+
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EShape">
+    <name>EShape6</name>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Left>239</Left>
+    <Top>364</Top>
+    <Width>260</Width>
+    <Height>82</Height>
+    <Locked>False</Locked>
+    <AutoSize>False</AutoSize>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+
+
+char LabelData[100];
+char data[100];
+
+LabelGet("ELabel2" , "Text" ,  LabelData);
+
+// KeypadAlphaExt(char *inData, char *outData , int timeout , int maxCharacter )
+KeypadNumExt(LabelData, data , 30000, 4 , "Hız");
+
+LabelSets("ELabel6" , data);
+
+
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel5</name>
+    <Left>282</Left>
+    <Top>294</Top>
+    <Locked>False</Locked>
+    <Caption>KeypadNumX</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel6</name>
+    <Left>279</Left>
+    <Top>382</Top>
+    <Locked>False</Locked>
+    <Caption>KeypadNumExt</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel12</name>
+    <Left>13</Left>
+    <Top>37</Top>
+    <Locked>False</Locked>
+    <Caption>Text</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>26</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel13</name>
+    <Left>614</Left>
+    <Top>64</Top>
+    <Locked>False</Locked>
+    <Caption>Text</Caption>
+    <keyboard>Numeric</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>28</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>ttl</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen2</Name>
+    <Rotate>Vertical</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex>
+    </BackgroundPictureHex>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel3</name>
+    <Left>128</Left>
+    <Top>90</Top>
+    <Locked>False</Locked>
+    <Caption>KeypadAlpha</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel4</name>
+    <Left>112</Left>
+    <Top>196</Top>
+    <Locked>False</Locked>
+    <Caption>KeypadAlphaExt</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Start</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EShape">
+    <name>EShape3</name>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Left>130</Left>
+    <Top>51</Top>
+    <Width>259</Width>
+    <Height>100</Height>
+    <Locked>False</Locked>
+    <AutoSize>False</AutoSize>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+
+
+char LabelData[100];
+char data[100];
+
+LabelGet("ELabel3" , "Text" ,  LabelData);
+
+KeypadAlpha(LabelData, data );
+
+LabelSets("ELabel3" , data);
+
+
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>EButton2</name>
+    <Left>325</Left>
+    <Top>706</Top>
+    <Width>120</Width>
+    <Height>60</Height>
+    <TextAligment>Center</TextAligment>
+    <Locked>False</Locked>
+    <Caption>Next</Caption>
+    <SoundOnOff>False</SoundOnOff>
+    <SoundName>Sound1</SoundName>
+    <SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>22</FontSize>
+    <Font_Color>-16777216</Font_Color>
+    <Visible>True</Visible>
+    <VisibleDesing>True</VisibleDesing>
+    <Active>True</Active>
+    <PushPull>False</PushPull>
+    <Opacity>100</Opacity>
+    <Color>-4144960</Color>
+    <ColorTo>-4144960</ColorTo>
+    <Press_Color>-1</Press_Color>
+    <Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor>
+    <PressCaption>Press Text</PressCaption>
+    <Gradient>None</Gradient>
+    <Static>False</Static>
+    <Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color>
+    <Pen_Width>1</Pen_Width>
+    <Effect>0</Effect>
+    <EffectTime>100</EffectTime>
+    <Placement>1</Placement>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+
+
+ChangeScreenSet("Screen1");
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EShape">
+    <name>EShape7</name>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Left>133</Left>
+    <Top>287</Top>
+    <Width>259</Width>
+    <Height>100</Height>
+    <Locked>False</Locked>
+    <AutoSize>False</AutoSize>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+
+
+char LabelData[100];
+char data[100];
+
+LabelGet("ELabel7" , "Text" ,  LabelData);
+
+KeypadNum("", data );
+
+LabelSets("ELabel7" , data);
+
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EShape">
+    <name>EShape8</name>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Left>131</Left>
+    <Top>408</Top>
+    <Width>259</Width>
+    <Height>100</Height>
+    <Locked>False</Locked>
+    <AutoSize>False</AutoSize>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+
+
+char LabelData[100];
+char data[100];
+
+LabelGet("ELabel8" , "Text" ,  LabelData);
+
+// KeypadAlphaExt(char *inData, char *outData , int timeout , int maxCharacter )
+KeypadNumExt(LabelData, data , 30000, 4 , "Basınç");
+
+LabelSets("ELabel8" , data);
+
+
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel7</name>
+    <Left>165</Left>
+    <Top>317</Top>
+    <Locked>False</Locked>
+    <Caption>KeypadNum</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabel">
+    <name>ELabel8</name>
+    <Left>136</Left>
+    <Top>438</Top>
+    <Locked>False</Locked>
+    <Caption>KeypadNumExt</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontName2>
+    </FontName2>
+    <FontType>System Font</FontType>
+    <FontSize>24</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="EShape">
+    <name>EShape4</name>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Left>130</Left>
+    <Top>164</Top>
+    <Width>259</Width>
+    <Height>100</Height>
+    <Locked>False</Locked>
+    <AutoSize>False</AutoSize>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>#include "stk.h"
+#include "stdio.h"
+
+
+char LabelData[100];
+char data[100];
+
+LabelGet("ELabel4" , "Text" ,  LabelData);
+
+// KeypadAlphaExt(char *inData, char *outData , int timeout , int maxCharacter )
+KeypadAlphaExt(LabelData, data , 30000, 4 , "Hum" );
+
+LabelSets("ELabel4" , data);
+
+
+
+
+</OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen2~FSCREEN:
