@@ -104,3 +104,5 @@ uint16_t n = vText.VarGet(buf, sizeof(buf));
 `AirVariable`, Arduino kodu ile AIRHMI ekranı arasında **iki yönlü değişken paylaşımı** sağlar — sensör verisini panele yansıtmak veya panelden gelen kullanıcı girdisini Arduino'ya almak için temel araçtır.
 
 ![Panel Görünümü](1.png)
+
+![Panel Görünümü](2.png)
