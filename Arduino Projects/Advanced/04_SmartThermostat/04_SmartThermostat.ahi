@@ -1,0 +1,51 @@
+800:480;3
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options"><DeviceComPort></DeviceComPort><DeviceBautRate>115200</DeviceBautRate><UploadInterface>usb</UploadInterface><ofs>Screen1</ofs><StartVideoStorage>Flash</StartVideoStorage></Controls>
+  <Controls ID="Screen"><OnStart></OnStart><Functions></Functions><BgColor>-16777216</BgColor><Name>Screen1</Name><Rotate>Horizontal</Rotate><Background_Image></Background_Image><BackgroundPictureHex /></Controls>
+  <Controls ID="ELabelBox"><name>ELabelTitle</name><Width>700</Width><Height>30</Height><Left>50</Left><Top>3</Top><Locked>False</Locked><Caption>Smart Thermostat (DS18B20 + Relay)</Caption><keyboard>None</keyboard><FontName>Roboto</FontName><FontSize>16</FontSize><Font_Color>-1</Font_Color><TextAligment>Center</TextAligment><Visible>True</Visible><Active>True</Active><Opacity>1</Opacity><Static>False</Static><Tag>255</Tag><Order /></Controls>
+  <Controls ID="EveGauge">
+    <PictureName></PictureName><PictureHex /><name>gTemp</name>
+    <Left>40</Left><Top>40</Top><Width>280</Width><Height>280</Height>
+    <Locked>False</Locked><Static>False</Static><Value>0</Value>
+    <Pen_Color>-65536</Pen_Color>
+    <NeedleCenterColor>-8355712</NeedleCenterColor><NeedleCenterSize>40</NeedleCenterSize>
+    <Visible>True</Visible><Active>True</Active><Opacity>100</Opacity>
+    <NeedleX>140</NeedleX><NeedleY>140</NeedleY>
+    <NeedleHeight>100</NeedleHeight><NeedleWidth>30</NeedleWidth>
+    <MaxValue>500</MaxValue><MinValue>0</MinValue>
+    <AngleStart>-135</AngleStart><AngleEnd>135</AngleEnd>
+    <NoPointer>False</NoPointer><NoBackGround>True</NoBackGround>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="ELabelBox"><name>lTemp</name><Width>280</Width><Height>50</Height><Left>40</Left><Top>320</Top><Locked>False</Locked><Caption>-- C</Caption><keyboard>None</keyboard><FontName>Roboto</FontName><FontSize>32</FontSize><Font_Color>-256</Font_Color><TextAligment>Center</TextAligment><Visible>True</Visible><Active>True</Active><Opacity>1</Opacity><Static>False</Static><Tag>255</Tag><Order /></Controls>
+  <Controls ID="ELabelBox"><name>capTarget</name><Width>240</Width><Height>30</Height><Left>360</Left><Top>50</Top><Locked>False</Locked><Caption>Target Temperature</Caption><keyboard>None</keyboard><FontName>Roboto</FontName><FontSize>14</FontSize><Font_Color>-8421505</Font_Color><TextAligment>Center</TextAligment><Visible>True</Visible><Active>True</Active><Opacity>1</Opacity><Static>False</Static><Tag>255</Tag><Order /></Controls>
+  <Controls ID="ELabelBox"><name>lTarget</name><Width>400</Width><Height>80</Height><Left>360</Left><Top>80</Top><Locked>False</Locked><Caption>22.0 C</Caption><keyboard>None</keyboard><FontName>Roboto</FontName><FontSize>54</FontSize><Font_Color>-1</Font_Color><TextAligment>Center</TextAligment><Visible>True</Visible><Active>True</Active><Opacity>1</Opacity><Static>False</Static><Tag>255</Tag><Order /></Controls>
+  <Controls ID="EveSlider">
+    <name>sTarget</name><direction>horizontal</direction>
+    <Left>360</Left><Top>180</Top><Width>400</Width><Height>40</Height>
+    <Locked>False</Locked><Value>220</Value>
+    <Visible>True</Visible><Static>False</Static><Active>True</Active>
+    <Color>-65536</Color><BackgroundColor>-12303292</BackgroundColor><ThumbColor>-1</ThumbColor>
+    <Range>300</Range><Tag>255</Tag><Order />
+    <OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>bRelay</name>
+    <Left>360</Left><Top>250</Top><Width>400</Width><Height>120</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>OFF</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>40</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>False</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-12303292</Color><ColorTo>-16777216</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>OFF</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>2</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:

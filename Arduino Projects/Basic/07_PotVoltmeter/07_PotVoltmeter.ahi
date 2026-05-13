@@ -1,0 +1,104 @@
+﻿800:480;3
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort>
+    </DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>usb</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart>
+    </OnStart>
+    <Functions>
+    </Functions>
+    <BgColor>-16777216</BgColor>
+    <Name>Screen1</Name>
+    <Rotate>Horizontal</Rotate>
+    <Background_Image>
+    </Background_Image>
+    <BackgroundPictureHex />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelTitle</name>
+    <Width>700</Width>
+    <Height>30</Height>
+    <Left>50</Left>
+    <Top>3</Top>
+    <Locked>False</Locked>
+    <Caption>Pot Voltmeter (ADC_0)</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>18</FontSize>
+    <Font_Color>-1</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>1</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+  <Controls ID="EveGauge">
+    <PictureName>
+    </PictureName>
+    <PictureHex />
+    <name>gVolt</name>
+    <Left>240</Left>
+    <Top>61</Top>
+    <Locked>False</Locked>
+    <Static>False</Static>
+    <Width>320</Width>
+    <Height>320</Height>
+    <Value>0</Value>
+    <Pen_Color>-65536</Pen_Color>
+    <NeedleCenterColor>-8355712</NeedleCenterColor>
+    <NeedleCenterSize>50</NeedleCenterSize>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>100</Opacity>
+    <NeedleX>160</NeedleX>
+    <NeedleY>160</NeedleY>
+    <NeedleHeight>100</NeedleHeight>
+    <NeedleWidth>40</NeedleWidth>
+    <MaxValue>500</MaxValue>
+    <MinValue>0</MinValue>
+    <AngleStart>-135</AngleStart>
+    <AngleEnd>135</AngleEnd>
+    <NoPointer>False</NoPointer>
+    <NoBackGround>True</NoBackGround>
+    <Tag>255</Tag>
+    <Order />
+    <OnUp>
+    </OnUp>
+    <OnDown>
+    </OnDown>
+    <OnClick>
+    </OnClick>
+    <OnPress>
+    </OnPress>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>lVolt</name>
+    <Width>400</Width>
+    <Height>60</Height>
+    <Left>200</Left>
+    <Top>390</Top>
+    <Locked>False</Locked>
+    <Caption>0.00 V</Caption>
+    <keyboard>None</keyboard>
+    <FontName>Roboto</FontName>
+    <FontSize>40</FontSize>
+    <Font_Color>-256</Font_Color>
+    <TextAligment>Center</TextAligment>
+    <Visible>True</Visible>
+    <Active>True</Active>
+    <Opacity>1</Opacity>
+    <Static>False</Static>
+    <Tag>255</Tag>
+    <Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:

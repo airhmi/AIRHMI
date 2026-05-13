@@ -1,0 +1,171 @@
+800:480;3
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort></DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>usb</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart></OnStart><Functions></Functions>
+    <BgColor>-16777216</BgColor><Name>Screen1</Name><Rotate>Horizontal</Rotate>
+    <Background_Image></Background_Image><BackgroundPictureHex />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelTitle</name>
+    <Width>700</Width><Height>30</Height><Left>50</Left><Top>3</Top>
+    <Locked>False</Locked><Caption>Button -> GPIO LED Map</Caption>
+    <keyboard>None</keyboard><FontName>Roboto</FontName><FontSize>18</FontSize>
+    <Font_Color>-1</Font_Color><TextAligment>Center</TextAligment>
+    <Visible>True</Visible><Active>True</Active><Opacity>1</Opacity>
+    <Static>False</Static><Tag>255</Tag><Order />
+  </Controls>
+  <Controls ID="EButton">
+    <name>dL0</name>
+    <Left>80</Left><Top>80</Top><Width>140</Width><Height>140</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>LED 0</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>22</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>False</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-12303292</Color><ColorTo>-16777216</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>LED 0</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>2</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>dL1</name>
+    <Left>240</Left><Top>80</Top><Width>140</Width><Height>140</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>LED 1</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>22</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>False</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-12303292</Color><ColorTo>-16777216</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>LED 1</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>2</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>dL2</name>
+    <Left>400</Left><Top>80</Top><Width>140</Width><Height>140</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>LED 2</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>22</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>False</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-12303292</Color><ColorTo>-16777216</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>LED 2</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>2</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>dL3</name>
+    <Left>560</Left><Top>80</Top><Width>140</Width><Height>140</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>LED 3</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>22</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>False</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-12303292</Color><ColorTo>-16777216</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>LED 3</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>2</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>bL0</name>
+    <Left>80</Left><Top>260</Top><Width>140</Width><Height>140</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>Toggle 0</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>20</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>True</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-16776961</Color><ColorTo>-16777088</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>Toggle 0</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>1</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>bL1</name>
+    <Left>240</Left><Top>260</Top><Width>140</Width><Height>140</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>Toggle 1</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>20</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>True</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-16776961</Color><ColorTo>-16777088</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>Toggle 1</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>1</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>bL2</name>
+    <Left>400</Left><Top>260</Top><Width>140</Width><Height>140</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>Toggle 2</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>20</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>True</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-16776961</Color><ColorTo>-16777088</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>Toggle 2</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>1</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="EButton">
+    <name>bL3</name>
+    <Left>560</Left><Top>260</Top><Width>140</Width><Height>140</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>Toggle 3</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>20</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>True</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-16776961</Color><ColorTo>-16777088</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>Toggle 3</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>1</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order /><OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>capNote</name>
+    <Width>720</Width><Height>40</Height><Left>40</Left><Top>420</Top>
+    <Locked>False</Locked><Caption>Toggle butonuna basinca ust LED gorseli + GPIO_X cikisi yanip soner.</Caption>
+    <keyboard>None</keyboard><FontName>Roboto</FontName><FontSize>14</FontSize>
+    <Font_Color>-8421505</Font_Color><TextAligment>Center</TextAligment>
+    <Visible>True</Visible><Active>True</Active><Opacity>1</Opacity>
+    <Static>False</Static><Tag>255</Tag><Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:

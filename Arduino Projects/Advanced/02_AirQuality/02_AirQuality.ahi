@@ -1,0 +1,103 @@
+800:480;3
+<?xml version="1.0" encoding="utf-8"?>
+<AirPanelPC>
+  <Controls ID="Options">
+    <DeviceComPort></DeviceComPort>
+    <DeviceBautRate>115200</DeviceBautRate>
+    <UploadInterface>usb</UploadInterface>
+    <ofs>Screen1</ofs>
+    <StartVideoStorage>Flash</StartVideoStorage>
+  </Controls>
+  <Controls ID="Screen">
+    <OnStart></OnStart><Functions></Functions>
+    <BgColor>-16777216</BgColor><Name>Screen1</Name><Rotate>Horizontal</Rotate>
+    <Background_Image></Background_Image><BackgroundPictureHex />
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>ELabelTitle</name>
+    <Width>700</Width><Height>30</Height><Left>50</Left><Top>3</Top>
+    <Locked>False</Locked><Caption>Air Quality Monitor (MQ135)</Caption>
+    <keyboard>None</keyboard><FontName>Roboto</FontName><FontSize>16</FontSize>
+    <Font_Color>-1</Font_Color><TextAligment>Center</TextAligment>
+    <Visible>True</Visible><Active>True</Active><Opacity>1</Opacity>
+    <Static>False</Static><Tag>255</Tag><Order />
+  </Controls>
+  <Controls ID="EveGauge">
+    <PictureName></PictureName><PictureHex />
+    <name>gPpm</name>
+    <Left>40</Left><Top>40</Top><Width>240</Width><Height>240</Height>
+    <Locked>False</Locked><Static>False</Static><Value>0</Value>
+    <Pen_Color>-65536</Pen_Color>
+    <NeedleCenterColor>-8355712</NeedleCenterColor><NeedleCenterSize>30</NeedleCenterSize>
+    <Visible>True</Visible><Active>True</Active><Opacity>100</Opacity>
+    <NeedleX>120</NeedleX><NeedleY>120</NeedleY>
+    <NeedleHeight>80</NeedleHeight><NeedleWidth>20</NeedleWidth>
+    <MaxValue>1023</MaxValue><MinValue>0</MinValue>
+    <AngleStart>-135</AngleStart><AngleEnd>135</AngleEnd>
+    <NoPointer>False</NoPointer><NoBackGround>True</NoBackGround>
+    <Tag>255</Tag><Order />
+    <OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>lPpm</name>
+    <Width>240</Width><Height>50</Height><Left>40</Left><Top>280</Top>
+    <Locked>False</Locked><Caption>--</Caption>
+    <keyboard>None</keyboard><FontName>Roboto</FontName><FontSize>32</FontSize>
+    <Font_Color>-256</Font_Color><TextAligment>Center</TextAligment>
+    <Visible>True</Visible><Active>True</Active><Opacity>1</Opacity>
+    <Static>False</Static><Tag>255</Tag><Order />
+  </Controls>
+  <Controls ID="EButton">
+    <name>bAlarm</name>
+    <Left>320</Left><Top>40</Top><Width>200</Width><Height>120</Height>
+    <TextAligment>Center</TextAligment><Locked>False</Locked><Caption>OK</Caption>
+    <SoundOnOff>False</SoundOnOff><SoundName>Sound1</SoundName><SoundVolume>40</SoundVolume>
+    <FontName>Roboto</FontName><FontName2></FontName2><FontType>System Font</FontType>
+    <FontSize>32</FontSize><Font_Color>-1</Font_Color>
+    <Visible>True</Visible><VisibleDesing>True</VisibleDesing><Active>False</Active>
+    <PushPull>False</PushPull><Opacity>100</Opacity>
+    <Color>-16744448</Color><ColorTo>-16777216</ColorTo>
+    <Press_Color>-1</Press_Color><Press_ColorTo>-4144960</Press_ColorTo>
+    <PressFontColor>-1</PressFontColor><PressCaption>OK</PressCaption>
+    <Gradient>Top to Bottom</Gradient><Static>False</Static><Permanent>False</Permanent>
+    <Pen_Color>-16777216</Pen_Color><Pen_Width>2</Pen_Width>
+    <Effect>0</Effect><EffectTime>100</EffectTime><Placement>1</Placement>
+    <Tag>255</Tag><Order />
+    <OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="ELabelBox">
+    <name>lLimit</name>
+    <Width>240</Width><Height>30</Height><Left>540</Left><Top>50</Top>
+    <Locked>False</Locked><Caption>Limit: 600</Caption>
+    <keyboard>None</keyboard><FontName>Roboto</FontName><FontSize>18</FontSize>
+    <Font_Color>-1</Font_Color><TextAligment>Center</TextAligment>
+    <Visible>True</Visible><Active>True</Active><Opacity>1</Opacity>
+    <Static>False</Static><Tag>255</Tag><Order />
+  </Controls>
+  <Controls ID="EveSlider">
+    <name>sLimit</name>
+    <direction>horizontal</direction>
+    <Left>540</Left><Top>90</Top><Width>240</Width><Height>50</Height>
+    <Locked>False</Locked><Value>600</Value>
+    <Visible>True</Visible><Static>False</Static><Active>True</Active>
+    <Color>-256</Color><BackgroundColor>-12303292</BackgroundColor><ThumbColor>-1</ThumbColor>
+    <Range>1000</Range><Tag>255</Tag><Order />
+    <OnUp></OnUp><OnDown></OnDown><OnClick></OnClick><OnPress></OnPress>
+  </Controls>
+  <Controls ID="EGraph">
+    <name>gphTrend</name>
+    <Static>False</Static>
+    <Left>320</Left><Top>180</Top><Width>460</Width><Height>150</Height>
+    <Locked>False</Locked><Visible>True</Visible>
+    <Grid_Vis>True</Grid_Vis><Grid_X_Size>10</Grid_X_Size><Grid_Y_Size>10</Grid_Y_Size>
+    <Scale_Multiple>1</Scale_Multiple><Scale_Tick_Distance>20</Scale_Tick_Distance>
+    <Scale_Offset>0</Scale_Offset><Y_Offset>0</Y_Offset>
+    <Line_Count>1</Line_Count>
+    <Line1_Color>-65536</Line1_Color>
+    <Line2_Color>-256</Line2_Color>
+    <Line3_Color>-16744448</Line3_Color>
+    <Line4_Color>-16181</Line4_Color>
+    <Tag>255</Tag><Order />
+  </Controls>
+</AirPanelPC>
+~SCREEN:Screen1~FSCREEN:
