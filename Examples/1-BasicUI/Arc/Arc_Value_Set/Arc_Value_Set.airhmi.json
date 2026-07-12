@@ -1,0 +1,128 @@
+{
+  "format": "airhmi-project",
+  "version": 2,
+  "name": "Arc_Value_Set",
+  "device": {
+    "width": 800,
+    "height": 480,
+    "rotation": "Horizontal",
+    "profile": "AIRHMI_7",
+    "modelId": "AIR800X480S70_E",
+    "series": "ELEMENTARY",
+    "firmware": "V5.07"
+  },
+  "resources": { "files": [], "fonts": [], "images": [], "sounds": [], "videos": [] },
+  "imageExportFormat": "Raw565",
+  "globalVariables": [],
+  "globalTimers": [],
+  "screens": [
+    {
+      "id": "arcexamplescr01",
+      "name": "Screen1",
+      "width": 800,
+      "height": 480,
+      "backgroundColor": -15987700,
+      "rotate": "Horizontal",
+      "onStart": "",
+      "functions": "",
+      "variables": [],
+      "timers": [],
+      "components": [
+        {
+          "componentType": "ELabelBox", "id": "arclbl00000001", "name": "TitleStatic", "ownerScreen": "Screen1",
+          "left": 60, "top": 40, "width": 240, "height": 40, "visible": true, "active": true, "static": false, "tag": 255,
+          "caption": "Static", "keyboard": "None", "fontName": "Roboto", "fontSize": 22, "fontColor": -1, "textAlignment": "Center"
+        },
+        {
+          "componentType": "ELabelBox", "id": "arclbl00000002", "name": "TitleDynamic", "ownerScreen": "Screen1",
+          "left": 500, "top": 40, "width": 240, "height": 40, "visible": true, "active": true, "static": false, "tag": 255,
+          "caption": "Dynamic", "keyboard": "None", "fontName": "Roboto", "fontSize": 22, "fontColor": -1, "textAlignment": "Center"
+        },
+        {
+          "componentType": "EArc", "id": "arc00000000001", "name": "Arc1", "ownerScreen": "Screen1",
+          "left": 120, "top": 110, "width": 170, "height": 170, "visible": true, "active": true, "static": true, "tag": 255,
+          "value": 30, "minValue": 0, "maxValue": 100, "startAngle": 135, "sweepAngle": 270,
+          "trackColor": -14931648, "trackWidth": 14, "trackVisible": true,
+          "valueColor": -12877066, "valueWidth": 14, "valueAlign": "Center", "roundedEnds": true
+        },
+        {
+          "componentType": "EArc", "id": "arc00000000002", "name": "Arc2", "ownerScreen": "Screen1",
+          "left": 510, "top": 110, "width": 170, "height": 170, "visible": true, "active": true, "static": false, "tag": 255,
+          "value": 30, "minValue": 0, "maxValue": 100, "startAngle": 135, "sweepAngle": 270,
+          "trackColor": -14931648, "trackWidth": 16, "trackVisible": true,
+          "valueColor": -16711936, "valueWidth": 8, "valueAlign": "Inner", "roundedEnds": true
+        },
+        {
+          "componentType": "ELabelBox", "id": "arcval00000001", "name": "ArcVal1", "ownerScreen": "Screen1", "order": 1,
+          "left": 160, "top": 173, "width": 90, "height": 44, "visible": true, "active": true, "static": true, "tag": 255,
+          "caption": "30", "keyboard": "None", "fontName": "Roboto", "fontSize": 34, "fontColor": -1, "textAlignment": "Center"
+        },
+        {
+          "componentType": "ELabelBox", "id": "arcval00000002", "name": "ArcVal2", "ownerScreen": "Screen1", "order": 1,
+          "left": 550, "top": 173, "width": 90, "height": 44, "visible": true, "active": true, "static": false, "tag": 255,
+          "caption": "30", "keyboard": "None", "fontName": "Roboto", "fontSize": 34, "fontColor": -1, "textAlignment": "Center"
+        },
+        {
+          "componentType": "EButton", "id": "arcbtn00000001", "name": "BtnSet80", "ownerScreen": "Screen1",
+          "left": 60, "top": 360, "width": 180, "height": 80, "visible": true, "active": true, "static": true, "tag": 255,
+          "caption": "Value 80", "fontName": "Roboto", "fontSize": 22, "fontColor": -1,
+          "color": -12877066, "colorTo": -16728065, "gradient": "Top to Bottom", "textAlignment": "Center",
+          "events": { "onUp": "", "onDown": "#include \"stk.h\"\n\nArcSet(\"Arc1\", \"Value\", \"80\");\nArcSet(\"Arc2\", \"Value\", \"80\");\nLabelSet(\"ArcVal1\", \"Text\", \"80\");\nLabelSet(\"ArcVal2\", \"Text\", \"80\");", "onClick": "", "onPress": "" }
+        },
+        {
+          "componentType": "EButton", "id": "arcbtn00000002", "name": "BtnSet30", "ownerScreen": "Screen1",
+          "left": 310, "top": 360, "width": 180, "height": 80, "visible": true, "active": true, "static": true, "tag": 255,
+          "caption": "Value 30", "fontName": "Roboto", "fontSize": 22, "fontColor": -1,
+          "color": -12877066, "colorTo": -16728065, "gradient": "Top to Bottom", "textAlignment": "Center",
+          "events": { "onUp": "", "onDown": "#include \"stk.h\"\n\nArcSet(\"Arc1\", \"Value\", \"30\");\nArcSet(\"Arc2\", \"Value\", \"30\");\nLabelSet(\"ArcVal1\", \"Text\", \"30\");\nLabelSet(\"ArcVal2\", \"Text\", \"30\");", "onClick": "", "onPress": "" }
+        },
+        {
+          "componentType": "EButton", "id": "arcbtn00000003", "name": "BtnPage2", "ownerScreen": "Screen1",
+          "left": 560, "top": 360, "width": 180, "height": 80, "visible": true, "active": true, "static": true, "tag": 255,
+          "caption": "Page 2", "fontName": "Roboto", "fontSize": 22, "fontColor": -1,
+          "color": -8355712, "colorTo": -12303292, "gradient": "Top to Bottom", "textAlignment": "Center",
+          "events": { "onUp": "", "onDown": "#include \"stk.h\"\n\nChangeScreenSet(\"Screen2\");", "onClick": "", "onPress": "" }
+        }
+      ]
+    },
+    {
+      "id": "arcexamplescr02",
+      "name": "Screen2",
+      "width": 800,
+      "height": 480,
+      "backgroundColor": -15987700,
+      "rotate": "Horizontal",
+      "onStart": "",
+      "functions": "",
+      "variables": [],
+      "timers": [],
+      "components": [
+        {
+          "componentType": "ELabelBox", "id": "arcp2lbl000001", "name": "Page2Title", "ownerScreen": "Screen2",
+          "left": 60, "top": 60, "width": 680, "height": 40, "visible": true, "active": true, "static": false, "tag": 255,
+          "caption": "Page 2 - Static Arc uzaktan set edilir", "keyboard": "None", "fontName": "Roboto", "fontSize": 22, "fontColor": -1, "textAlignment": "Center"
+        },
+        {
+          "componentType": "ELabelBox", "id": "arcp2lbl000002", "name": "Page2Info", "ownerScreen": "Screen2",
+          "left": 60, "top": 150, "width": 680, "height": 140, "visible": true, "active": true, "static": false, "tag": 255,
+          "caption": "Static Arc1 degeri bu sayfadan ArcSet ile 60 yapilir. Page 1 e donunce yeni deger korunur. Dynamic Arc2 sayfaya ozgu oldugu icin buradan degistirilemez.", "keyboard": "None", "fontName": "Roboto", "fontSize": 18, "fontColor": -5658199, "textAlignment": "Center"
+        },
+        {
+          "componentType": "EButton", "id": "arcp2btn00001", "name": "BtnStatic60", "ownerScreen": "Screen2",
+          "left": 200, "top": 340, "width": 180, "height": 80, "visible": true, "active": true, "static": true, "tag": 255,
+          "caption": "Static 60", "fontName": "Roboto", "fontSize": 22, "fontColor": -1,
+          "color": -12877066, "colorTo": -16728065, "gradient": "Top to Bottom", "textAlignment": "Center",
+          "events": { "onUp": "", "onDown": "#include \"stk.h\"\n\nArcSet(\"Arc1\", \"Value\", \"60\");\nLabelSet(\"ArcVal1\", \"Text\", \"60\");", "onClick": "", "onPress": "" }
+        },
+        {
+          "componentType": "EButton", "id": "arcp2btn00002", "name": "BtnPage1", "ownerScreen": "Screen2",
+          "left": 420, "top": 340, "width": 180, "height": 80, "visible": true, "active": true, "static": true, "tag": 255,
+          "caption": "Page 1", "fontName": "Roboto", "fontSize": 22, "fontColor": -1,
+          "color": -8355712, "colorTo": -12303292, "gradient": "Top to Bottom", "textAlignment": "Center",
+          "events": { "onUp": "", "onDown": "#include \"stk.h\"\n\nChangeScreenSet(\"Screen1\");", "onClick": "", "onPress": "" }
+        }
+      ]
+    }
+  ],
+  "openFirstScreen": "Screen1"
+}
