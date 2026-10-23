@@ -1,4 +1,4 @@
-﻿800:480;2
+﻿800:480;3
 <?xml version="1.0" encoding="utf-8"?>
 <AirPanelPC>
   <Controls ID="Options">
@@ -19,8 +19,7 @@
     <Rotate>Horizontal</Rotate>
     <Background_Image>
     </Background_Image>
-    <BackgroundPictureHex>
-    </BackgroundPictureHex>
+    <BackgroundPictureHex />
   </Controls>
   <Controls ID="ELabelBox">
     <name>ELabelBox1</name>
@@ -339,8 +338,7 @@ ChangeScreenSet("Screen2");
     <Rotate>Horizontal</Rotate>
     <Background_Image>
     </Background_Image>
-    <BackgroundPictureHex>
-    </BackgroundPictureHex>
+    <BackgroundPictureHex />
   </Controls>
   <Controls ID="EButton">
     <name>EButton6</name>
