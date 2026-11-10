@@ -73,7 +73,8 @@ EthernetInit_Static("192.168.1.150","192.168.1.1","255.255.255.0");
 #include "stdio.h"
 
 char data[4096];
-HTTP_PostGet("www.google.com","GET {path} HTTP/1.1\r\nHost: {host}\r\n\r\n",data);
+int len;
+HTTP_PostGet("www.google.com","GET {path} HTTP/1.1\r\nHost: {host}\r\n\r\n",data,&amp;len);
 printf("Data:%s\n",data);
 
 </OnDown>
@@ -245,7 +246,8 @@ LabelSet("ELabel2" , "Text" , data);
 #include "stdio.h"
 
 char DATA[1024];
-SocketTCP_SendReceive("GET {path} HTTP/1.1$0d$0aHost: {host}$0d$0a$0d$0a",DATA);
+int len;
+SocketTCP_SendReceive("GET {path} HTTP/1.1$0d$0aHost: {host}$0d$0a$0d$0a",strlen("GET {path} HTTP/1.1$0d$0aHost: {host}$0d$0a$0d$0a"),DATA,&amp;len);
 printf("DATA:%s\n",DATA);
 
 </OnDown>
@@ -385,7 +387,8 @@ else
 
 char rcv[100];
 
-int size = SocketTCP_Receive(rcv);
+int len;
+int size = SocketTCP_Receive(rcv,&amp;len);
 if( size )
     printf("Data:%s\n",rcv);
 
@@ -520,7 +523,8 @@ SocketTCP_Create("192.168.1.49",8000);
 #include "stdio.h"
 
 char DATA[1024];
-SocketTCP_SendReceive("GET {path} HTTP/1.1$0d$0aHost: {host}$0d$0a$0d$0a",DATA);
+int len;
+SocketTCP_SendReceive("GET {path} HTTP/1.1$0d$0aHost: {host}$0d$0a$0d$0a",strlen("GET {path} HTTP/1.1$0d$0aHost: {host}$0d$0a$0d$0a"),DATA,&amp;len);
 printf("DATA:%s\n",DATA);
 
 </OnDown>
@@ -629,7 +633,8 @@ SocketTCP_Send("AIRHMI",6);
 
 char rcv[100];
 
-SocketTCP_Receive(rcv);
+int len;
+SocketTCP_Receive(rcv,&amp;len);
 printf("Data:%s\n",rcv);
 
 </OnDown>
